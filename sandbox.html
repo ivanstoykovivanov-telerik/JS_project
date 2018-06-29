@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evento</title>
+    <style>
+        .input-field label[for=city] {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10%;
+        }
+
+        .input-field input {
+            margin-top: 2em;
+            margin-bottom: 2em;
+        }
+
+        .input-field input::placeholder {
+            color: gray;
+            font-size: 1.2em;
+        }
+
+        .search_icon {
+            margin-top: 2em;
+            margin-bottom: 7.5em;
+        }
+
+        .rounded {
+            background-color: rgba(236, 44, 27, 0.74);
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- INPUT -->
+        <div class="col l12 m12 s12">
+            <h1 class="center-align">Feel the pulse of your city</h1>
+        </div>
+        <div class="col l6 m6 s6">
+            <div class="input-field col s6">
+                <input placeholder=" city: " id="city" type="text" class="autocomplete">
+                <label for="city">I live in: </label>
+            </div>
+        </div>
+        <div class="input-field col l6 s12">
+            <select>
+                <option value="" disabled selected>I like: </option>
+                <option value="1">Music</option>
+                <option value="2">Theater</option>
+                <option value="3">Galleries</option>
+                <option value="4">Film</option>
+            </select>
+            <label>Events to search for</label>
+        </div>
+        <!-- OPTIONAL -->
+        <!-- DATEPICKER -->
+        <div class="input-field">
+            <input type="text" id="date" class="datepicker">
+            <label for="date">Choose Date: </label>
+        </div>
+        <!-- END DATEPICKER -->
+        <!-- TIMEPICKER -->
+        <div class="input-field">
+            <input type="text" id="time" class="timepicker">
+            <label for="time">Chooese Time: </label>
+        </div>
+        <!-- END TIMEPICKER -->
+        <!-- END INPUT -->
+        <div class="row search_icon">
+            <div class="col l12 m12 s12 center-align">
+                <button class="btn-floating btn-large text-green pulse">
+                    <i class="material-icons">search</i>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col l4 m6 s12">
+                <div class="card orange lighten-4">
+                    <div class="card-image">
+                        <img src="img/img6.jpg">
+                        <a class="btn-floating halfway-fab waves-effect waves-light red">
+                            <i class="material-icons add-to-favorites">favorite_border</i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h5 class="green-text">Card Title</h5>
+                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
+                            I require little markup to use effectively.I am a very simple card. I am good at containing small
+                            bits of information.
+                        </p>
+                        <h6>$5.00</h6>
+                    </div>
+                    <div class="card-action">
+                        <div class="center-align">
+                            <a class="btn orange center-align" href="!#">Buy ticket</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col l4 m6 s12">
+                <div class="card  lime accent-3">
+                    <div class="card-image">
+                        <img src="img/img6.jpg">
+                        <a class="btn-floating halfway-fab waves-effect waves-light red">
+                            <i class="material-icons add-to-favorites">favorite_border</i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h5 class="green-text">Card Title</h5>
+                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
+                            I require little markup to use effectively.I am a very simple card. I am good at containing small
+                            bits of information.
+                        </p>
+                        <h4>$5.00</h4>
+                    </div>
+                    <div class="card-action">
+                        <div class="center-align">
+                            <a class="btn orange center-align" href="!#">Buy ticket</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col l4 m6 s12">
+                <div class="card amber lighten-4">
+                    <div class="card-image">
+                        <img src="img/img6.jpg">
+                        <a class="btn-floating halfway-fab waves-effect waves-light red">
+                            <i class="material-icons heart add-to-favorites">favorite_border</i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h5 class="green-text">Card Title</h5>
+                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
+                            I require little markup to use effectively.I am a very simple card. I am good at containing small
+                            bits of information.
+                        </p>
+                        <h4>$5.00</h4>
+                    </div>
+                    <div class="card-action">
+                        <div class="center-align">
+                            <a class="btn orange center-align" href="!#">Buy ticket</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col l4 m6 s12">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="img/img6.jpg">
+                        <a class="btn-floating halfway-fab waves-effect waves-light red">
+                            <i class="material-icons add-to-favorites">favorite_border</i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h5 class="green-text">Card Title</h5>
+                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
+                            I require little markup to use effectively.I am a very simple card. I am good at containing small
+                            bits of information.
+                        </p>
+                        <h4>$5.00</h4>
+                    </div>
+                    <div class="card-action">
+                        <div class="center-align">
+                            <a class="btn orange center-align" href="!#">Buy ticket</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col l4 m6 s12">
+                <div class="card purple lighten-4">
+                    <div class="card-image">
+                        <img src="img/img6.jpg">
+                        <a class="btn-floating halfway-fab waves-effect waves-light red">
+                            <i class="material-icons add-to-favorites">favorite_border</i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h5 class="green-text">Card Title</h5>
+                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
+                            I require little markup to use effectively.I am a very simple card. I am good at containing small
+                            bits of information.
+                        </p>
+                        <h4>$5.00</h4>
+                    </div>
+                    <div class="card-action">
+                        <div class="center-align">
+                            <a class="btn orange center-align" href="!#">Buy ticket</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col l4 m6 s12">
+                <div class="card purple lighten-4">
+                    <div class="card-image">
+                        <img src="img/img6.jpg">
+                        <a class="btn-floating halfway-fab waves-effect waves-light red">
+                            <i class="material-icons add-to-favorites">favorite_border</i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h5 class="green-text">Card Title</h5>
+                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
+                            I require little markup to use effectively.I am a very simple card. I am good at containing small
+                            bits of information.
+                        </p>
+                        <h4>$5.00</h4>
+                    </div>
+                    <div class="card-action">
+                        <div class="center-align">
+                            <a class="btn orange center-align" href="!#">Buy ticket</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="page-footer purple lighten-1">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 l3">
+                    <i class="material-icons medium">loyalty</i>
+                </div>
+                <div class="col s12 l3">
+                    <i class="material-icons medium">grade</i>
+                </div>
+                <div class="col s12 l3">
+                    <i class="material-icons medium">flight_land</i>
+                </div>
+                <div class="col s12 l3">
+                    <i class="material-icons medium">label</i>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.dropdown-button').dropdown({
+                constrainWidth: false,
+                hover: true,
+                belowOrigin: true,
+                alignment: 'left'
+            });
+
+            // jQuery Initializers start here : 
+
+            //Initialize AUTOCOMPLETE:
+            //TODO make a request to an API for some data and put it here : 
+            $('.autocomplete').autocomplete({
+                data: {
+                    "Sofia": null,
+                    "Los Angeles": null,
+                    "Plovdiv": null
+                },
+                limit: 10
+            })
+
+            //Initialize SELECT
+            $('select').material_select();
+
+
+            // Initialize DATEPICKER : 
+            $('.datepicker').pickadate({
+                selectMonths: true,
+                selectYears: 15,
+                closeOnSelect: true
+            });
+
+            // Initialize TIMEPICKER : 
+            $('.timepicker').pickatime({
+                dafault: "now",
+                twelvehour: true,
+                autoclose: true
+            });
+
+            //Initialize TOAST
+            var toastHTML =
+                '<span><button class="btn-flat white-text toast-action">Added to favourites</button></span>';
+            $('.add-to-favorites').click(function () {
+                Materialize.toast(toastHTML, 3000, 'rounded');
+            });
+
+        });
+    </script>
+</body>
+
+</html>
