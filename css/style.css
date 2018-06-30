@@ -4,80 +4,83 @@
 
 
 /******* HEADER ***********/
-.wrapper{
-    /* background: url("../img/city_1.jpg");  !!!  great */  
-    background: url("../img/city_painting.jpg");   
-  }
-  
-  .main-header{
-    /* background: url("../img/city_1.jpg");  */
-  }
-  
-  /***** SEARCH FORM *********/
-  .section-search{
-    background-color: rgba(99, 204, 116, 0.15);  
-  }
-  
-  .search-form {
-    /* background: #C2FF42;  */
-    background:rgba(255, 255, 255, 0.829); 
-    /* border: 1px solid black ;  */
-    margin-top: 30px;
-    margin-bottom: 100px; 
-    padding: 40px 10% !important;
-    color: black !important;   
-  }
-  
-  .search-form label,
-  .input-field input::placeholder{
-    color: gray !important;
-    font-size: 2em;    
-  }
-  
-  .input-field input{
-    margin-top: 2em;
-    margin-bottom: 2em;
-    border-bottom: 2px solid black !important;  
-  }
-  
-  .search_icon {
-    margin-top: 2em;
-    margin-bottom: 7.5em;
-  }
-  
-  /* .rounded {
-    background-color: rgba(236, 44, 27, 0.74);
-    color: blue;
-  } */
-  
-  /***** CARDS *********/
-  
-  .card-content h5{
-    font-weight: bolder; 
-  }
-  
-  
-  /***** TOAST *********/
-  .rounded {
-    background-color: #FF962C;
-    margin-left: 0%;  
-  }
-  
-  /***** FOOTER *********/
-  
-  footer{
-    background-color: #E1BCE4 !important ;
-    margin-top: 140px;
-    padding: 50px 0%;
-  }
-  
-  footer i{
-    margin: 5px 1.5% ;  
-  }
-  
-  footer h4,
-  footer p {
-    font-weight: bold; 
-  }
-  
-  
+body{
+  /* background: url("../img/city_1.jpg");  !!!  great */  
+  background: url("../img/city_painting.jpg");   
+}
+
+.main-header{
+
+}
+.brand-logo{
+  font-size: 3.5em !important;
+  color: #FF962C !important; 
+  font-weight: bolder !important; 
+}
+/***** SEARCH FORM *********/
+.section-search{
+  background-color: rgba(99, 204, 116, 0.15);  
+}
+
+.title-main{
+  font-size: 4.5em; 
+  font-weight: bolder; 
+}
+
+.search-form {
+  /* background: #C2FF42;  */
+  background:rgba(255, 255, 255, 0.829); 
+  /* border: 1px solid black ;  */
+  margin-top: 30px;
+  margin-bottom: 100px; 
+  padding: 40px 10% !important;
+  color: black !important;   
+}
+
+.search-form label,
+.input-field input::placeholder{
+  color: gray !important;
+  font-size: 2em;    
+}
+
+.input-field input{
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border-bottom: 2px solid black !important;  
+}
+
+.search_icon {
+  margin-top: 2em;
+  margin-bottom: 7.5em;
+}
+
+
+/***** CARDS *********/
+
+.card-content h5 {
+  font-weight: bolder; 
+}
+
+
+/***** TOAST *********/
+.rounded {
+  background-color: #FF962C;
+  margin-left: 0%;  
+}
+
+/***** FOOTER *********/
+footer{
+  background-color: rgba(225, 188, 228, 0.315) !important ;
+  margin-top: 140px;
+  padding: 50px 0%;
+}
+
+footer i{
+  margin: 5px 3% ;  
+}
+
+footer h3,
+footer p {
+  font-weight: bold; 
+}
+
