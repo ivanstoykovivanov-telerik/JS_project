@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +13,8 @@
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection" />
-
+    <!-- add roboto font  ??? -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Evento</title>
@@ -82,13 +82,10 @@
                             <label for="city"></label>
                         </div>
                         <div class="input-field col s12">
-                            <select>
-                                <option value="" disabled selected>Events: </option>
-                                <option value="1">Music</option>
-                                <option value="2">Theater</option>
-                                <option value="3">Galleries</option>
-                                <option value="4">Film</option>
+                            <select id="category">
+                                <option value="Category" disabled selected>Choose your interest:</option>
                             </select>
+                            <label>Event Categories:</label>
                         </div>
                         <div class="input-field col s12">
                             <input type="text" id="date" class="datepicker" placeholder="Date: ">
@@ -101,15 +98,19 @@
             </div>
         </section>
 
-        <section>
+        <section class="search_icon">
             <div class="container">
-                <div class="row search_icon">
-                    <div class="col l12 m12 s12 center-align">
-                        <button class="btn-floating btn-large orange text-green pulse tooltipped" data-position="bottom" data-tooltip="Search events">
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <button id="searchBtn" class="btn-floating btn-large orange text-green pulse tooltipped" data-position="bottom" data-tooltip="Search events">
                             <i class="material-icons"> search</i>
                         </button>
                     </div>
                 </div>
+            </div>   
+        </section>
+        <section>
+            <div class="container">
                 <div class="row">
                     <!-- FIRST CARD -->
                     <div class="col l4 m6 s12">
@@ -253,7 +254,6 @@
                     </div>
                 </div>
             </div>
-            </div>
         </section>
         <footer class="center">
             <div class="container">
@@ -306,11 +306,9 @@
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
-    
+
     <!-- JS Scripts/ Modules -->
-    <script src="js/EventBriteAuthenticator.js"></script>
-    <script src="js/ui.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/app.js"  type="module"></script>
    
 
     <!-- JQUERY FOR MATERIALIZE.CSS  -->

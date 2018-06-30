@@ -49,9 +49,41 @@ body{
   border-bottom: 2px solid black !important;  
 }
 
+
+.select-wrapper{
+  margin-top: 20px;
+}
+
+.select-dropdown li.disabled>span{
+  color:rgb(221, 187, 241) ;
+  background-color: #005CC5; 
+  font-size: 1.1em;
+  font-weight:500 ;
+  /* background-color: #AA9AB4 */
+}
+
+.dropdown-content li>span{
+  color:rgb(185, 218, 233) ;
+  font-weight:normal; 
+  background-color: #005CC5; 
+}
+
 .search_icon {
-  margin-top: 2em;
+  margin-top: 0px;
   margin-bottom: 7.5em;
+}
+
+.btn-floating.btn-large {
+  width: 70px;
+  height: 70px;
+}
+
+.btn-large i {
+  font-size: 2.3rem;
+}
+
+.btn-floating.btn-large i {
+  line-height: 75px;
 }
 
 
