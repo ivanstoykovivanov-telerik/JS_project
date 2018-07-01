@@ -157,9 +157,26 @@ footer p {
 #mobile-nav li>a{
   color: white;
   font-size: 1.5rem;
+  margin-left: 1.4rem;
+}
+
+#mobile-nav .content{
+  margin-left: .6rem; 
 }
 
 .logo-mobile{
   color:black; 
   font-weight:bold; 
+}
+
+/********* LOGIN *********/
+.login{
+  border-left: 0px;
+}
+
+.login-btn{
+  display: block; 
+  width: 15%; 
+  margin: auto; 
+  margin-top: 20px; 
 }

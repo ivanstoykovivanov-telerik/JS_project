@@ -23,58 +23,60 @@
 <body>  
     <!-- NAVBAR -->
     <header class="main-header">
-        <nav class="transparent">
-            <div class="container">
-                <div class="nav-wrapper">   
-                    <a href="#" class="brand-logo black-text"></a> <!-- name of the app or logo -->
-                    <a href="#" data-activates="mobile-nav" class="button-collapse">
-                        <i class="fa fa-bars"></i>  
-                    </a>
-                    <ul class="right hide-on-med-and-down">
-                        <li>
-                            <a href="" class="btn modal-trigger orange" data-target="modal_liked_events">Favourites</a>
-                        </li>
-                        <li>
-                            <a href="" class="btn modal-trigger orange" data-target="modal_register">Register</a>
-                        </li>
-                        <li>
-                            <a href="" class="btn modal-trigger orange" data-target="modal_login">Login</a>
-                        </li>
-                        <li>
-                            <a href="" class="btn modal-trigger orange" data-target="modal_logout">Logout</a>
-                        </li>
-                    </ul>
-                    <!-- MOBILE NAV -->
-                    <ul class="side-nav" id="mobile-nav">
-                        <h4 class="black-text text-darken-4 center logo-mobile">Evento</h4>
-                        <li>
-                            <div class="divider"></div>
-                        </li>
-                        <li>
-                            <a href="">
-                                <i class="fa fa-register" data-target="modal_liked_events">Favourites</i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <i class="fa fa-register">Register</i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <i class="fa fa-logout">Logout</i>
-                            </a>
-                        </li>
-                        <li>
-                            <div class="divider black-text"></div>
-                        </li>
-                        <li>
-                            <a href="" class="btn modal-trigger orange white-text" data-target="modal_login">Login</a>
-                        </li>
-                    </ul>
+        <!-- <div class="navbar-fixed"> -->
+            <nav class="transparent">
+                <div class="container">
+                    <div class="nav-wrapper">   
+                        <a href="#" class="brand-logo black-text"></a> <!-- name of the app or logo -->
+                        <a href="#" data-activates="mobile-nav" class="button-collapse">
+                            <i class="fa fa-bars"></i>  
+                        </a>
+                        <ul class="right hide-on-med-and-down">
+                            <li>
+                                <a href="" class="btn modal-trigger orange" data-target="modal_liked_events">Favourites</a>
+                            </li>
+                            <li>
+                                <a href="" class="btn modal-trigger orange" data-target="modal_register">Register</a>
+                            </li>
+                            <li>
+                                <a href="" class="btn modal-trigger orange" data-target="modal_login">Login</a>
+                            </li>
+                            <li>
+                                <a href="" class="btn modal-trigger orange" data-target="modal_logout">Logout</a>
+                            </li>
+                        </ul>
+                        <!-- MOBILE NAV -->
+                        <ul class="side-nav" id="mobile-nav">
+                            <h4 class="black-text text-darken-4 center logo-mobile">Evento</h4>
+                            <li>
+                                <div class="divider"></div>
+                            </li>
+                            <li>
+                                <a href="" class="modal-trigger" data-target="modal_liked_events">
+                                    <i class="far fa-heart  modal-trigger" ><span class="content">Favourites</span></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="modal-trigger" data-target="modal_register">
+                                    <i class="fas fa-user-plus" ><span class="content">Register</span></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="modal-trigger" data-target="modal_logout">
+                                    <i class="fas fa-sign-out-alt" ><span class="content">Logout</span></i>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="divider black-text"></div>
+                            </li>
+                            <li>
+                                <a href="" class="btn modal-trigger orange white-text" data-target="modal_login">Login</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        <!-- </div>     -->
     </header>
     <!-- END NAVBAR -->
     
@@ -224,25 +226,52 @@
     <!-- MODALS  -->
     <!-- REGISTER -->
     <div id="modal_register" class="modal">
-        <div class="modal-content">
-            <h4>Register</h4>
-            <p>Register form</p>
-        </div>
-        <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        <div class="modal-content blue darken-2">
+            <h3 class="center-align white-text">Register</h3>
+            <form>
+                <div class="input-field">
+                    <i class="material-icons prefix">email</i>
+                    <input type="email" id="email">
+                    <label class="white-text" for="email">Email</label>
+                </div>
+                <div class="input-field">
+                    <i class="material-icons prefix">lock</i>
+                    <input type="email" id="password">
+                    <label class="white-text" for="email">Password</label>
+                </div>
+                <div class="input-field">
+                        <i class="material-icons prefix">lock</i>
+                        <input type="email" id="password">
+                        <label class="white-text" for="email">Repeat Password</label>
+                    </div>
+                <button class="btn btn-large orange white-text login-btn waves-effect">
+                    <i class="fas fa-sign-in-alt"></i>
+                </button>
+            </form>
         </div>
     </div>
     <!-- LOGIN -->
     <div id="modal_login" class="modal">
-        <div class="modal-content">
-            <h4>Modal Header</h4>
-            <p>A bunch of text</p>
-        </div>
-        <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        <div class="modal-content login blue darken-2">
+            <h3 class="center-align white-text">Login</h3>
+            <form>
+                <div class="input-field">
+                    <i class="material-icons prefix">email</i>
+                    <input type="email" id="email">
+                    <label class="white-text" for="email">Email</label>
+                </div>
+                <div class="input-field">
+                    <i class="material-icons prefix">lock</i>
+                    <input type="email" id="password">
+                    <label class="white-text" for="email">Password</label>
+                </div>
+                <button class="btn btn-large orange white-text login-btn">
+                    <i class="fas fa-sign-in-alt"></i>
+                </button>
+            </form>
         </div>
     </div>
-    <!-- LOGIN -->
+    <!-- LOGOUT -->
     <div id="modal_logout" class="modal">
             <div class="modal-content center-align">
                 <h5>You have successfully logged out.</h5>
@@ -262,7 +291,7 @@
             <div class="modal-footer">
                 <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
             </div>
-        </div>
+    </div>
     <!-- END MODALS  -->
 
     <!--Import jQuery before materialize.js-->

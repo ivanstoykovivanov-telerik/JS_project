@@ -11,7 +11,6 @@ export class  UI{
         this.categoriesSelect = document.querySelector("#category"); 
         this.displayCategories();
         this.eventsHTML = document.querySelector("#eventCards"); 
-
     }
 
     displayCategories(){
@@ -73,13 +72,8 @@ export class  UI{
                 </div>
             `
         });
-
-
         this.eventsHTML.innerHTML = html
     }
-
-
-
 
     displayErrorMessage(content, id){
             const div = document.createElement('div');
@@ -101,17 +95,7 @@ export class  UI{
     removeMessage(){
         //remove the error message        
     }
-
-
 }
 
-
-
-//THIS MODULE GETS INFO FROM USER:
-
-
-// export const   cityInput = document.querySelector("#city"), 
-//                dateInput = document.querySelector("#date"), 
-//                timeInput = document.querySelector("#time");
 
 
