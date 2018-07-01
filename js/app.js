@@ -28,8 +28,18 @@ document.querySelector("#searchBtn").addEventListener('click', (e) => {
                 console.log(eventsLength);
 
                 if(eventsLength > 0){
-                    //PRINT THE EVENTS: 
-                    ui.displayEvents(eventsList);         
+                    //Show the event cards : 
+                    ui.displayEvents(eventsList);
+                    
+                    //Add event listeners for the new cards: 
+                    //TOASTS
+                    var toastHTML = '<button class="btn-flat white-text toast-action">Added to favourites</button>';
+                    $('.add-to-favorites').click(function () {
+                        Materialize.toast(toastHTML, 2000, 'rounded');
+                    });
+
+                    //MATERIALBOX
+
                 }else{
                     ui.displayErrorMessage("No events found");    
                 }

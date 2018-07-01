@@ -20,54 +20,65 @@
     <title>Evento</title>
 </head>
 
-<body>
-    <!-- <div class="wrapper"> -->
-        <header class="main-header">
-            <nav class="transparent">
-                <div class="container">
-                    <div class="nav-wrapper">   
-                        <a href="#" class="brand-logo black-text"></a>
-                        <a href="#" data-activates="mobile-nav" class="button-collapse">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                        <ul class="right hide-on-medium-and-down">
-                            <li>
-                                <a href="" class="btn modal-trigger orange" data-target="modal_register">Register</a>
-                            </li>
-                            <li>
-                                <a href="" class="btn modal-trigger orange" data-target="modal_login">Login</a>
-                            </li>
-                            <li>
-                                <a href="" class="btn modal-trigger orange" data-target="modal_logout">Logout</a>
-                            </li>
-                        </ul>
-                        <ul class="side-nav" id="mobile-nav">
-                            <h4 class="purple-text text-darken-4 center">Evento</h4>
-                            <li>
-                                <div class="divider"></div>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <i class="fa fa-register">Register</i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <i class="fa fa-login">Login</i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <i class="fa fa-logout">Logout</i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+<body>  
+    <!-- NAVBAR -->
+    <header class="main-header">
+        <nav class="transparent">
+            <div class="container">
+                <div class="nav-wrapper">   
+                    <a href="#" class="brand-logo black-text"></a> <!-- name of the app or logo -->
+                    <a href="#" data-activates="mobile-nav" class="button-collapse">
+                        <i class="fa fa-bars"></i>  
+                    </a>
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a href="" class="btn modal-trigger orange" data-target="modal_liked_events">Favourites</a>
+                        </li>
+                        <li>
+                            <a href="" class="btn modal-trigger orange" data-target="modal_register">Register</a>
+                        </li>
+                        <li>
+                            <a href="" class="btn modal-trigger orange" data-target="modal_login">Login</a>
+                        </li>
+                        <li>
+                            <a href="" class="btn modal-trigger orange" data-target="modal_logout">Logout</a>
+                        </li>
+                    </ul>
+                    <!-- MOBILE NAV -->
+                    <ul class="side-nav" id="mobile-nav">
+                        <h4 class="black-text text-darken-4 center logo-mobile">Evento</h4>
+                        <li>
+                            <div class="divider"></div>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa fa-register" data-target="modal_liked_events">Favourites</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa fa-register">Register</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa fa-logout">Logout</i>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="divider black-text"></div>
+                        </li>
+                        <li>
+                            <a href="" class="btn modal-trigger orange white-text" data-target="modal_login">Login</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-        </header>
-
-        <section class="section-search center">
+            </div>
+        </nav>
+    </header>
+    <!-- END NAVBAR -->
+    
+    <section class="section-search center">
             <div class="container">
                 <div class="row">
                     <div class="col s12">
@@ -112,174 +123,69 @@
         <section>
             <div class="container">
                 <div class="row">
-                    <!-- FIRST CARD -->
+                    
+                    <div id="eventCards">
+                    <!-- DATA FROM API COMES HERE  -->
+                    </div>
+                    
+                    <!-- GENERIC CARD  -->
+                    <div class="col l4 m6 s12">
+                        <div class="card purple lighten-4 float">
+                            <div class="card-image">
+                                <img src="img/img6.jpg"  class="materialboxed" width="100%" data-caption="Info goes here">
+                                <a class="btn-floating halfway-fab waves-effect waves-light red">
+                                    <i class="material-icons add-to-favorites">favorite_border</i>
+                                </a>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title">Card Title Materialize </span>
+                                <div class="event-description">
+                                        I am a very simple card. I am good at containing small bits of information. I am convenient because
+                                        I require little markup to use effectively.I am a very simple card. I am good at containing
+                                        small bits of information.
+                                </div>
+                            </div>
+                            <div class="card-action">
+                                <div class="center-align">
+                                    <a class="btn orange center-align" href="!#">Buy ticket</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END GENERIC CARD  -->
+
+                    <!-- TEST  -->
                     <div class="col l4 m6 s12">
                             <div class="card purple lighten-4">
                                 <div class="card-image">
-                                    <img src="img/img6.jpg">
-                                    <a class="btn-floating halfway-fab waves-effect waves-light orange">
-                                        <i class="material-icons add-to-favorites">favorite_border</i>
+                                    <img class="materialboxed"  
+                                        src="${event.logo !== null ? event.logo.url : ''}" 
+                                        width="100%" data-caption="Info goes here">
+                                    <a class="btn-floating halfway-fab waves-effect waves-light red tooltipped" 
+                                        data-position="bottom" data-tooltip="Add to favourites">
+                                        <i class="material-icons add-to-favorites"> favorite_border </i>
                                     </a>
                                 </div>
                                 <div class="card-content">
-                                    <h5 class="green-text">Card Title</h5>
-                                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
-                                        I require little markup to use effectively.I am a very simple card. I am good at containing
-                                        small bits of information.
+                                    <h5 class="black-text">
+                                        ${event.name.text}
+                                    </h5>
+                                    <h6>
+                                        Date: ${event.start.local}
+                                    </h6>
+                                    <p>
+                                        ${event.description.text.substring(0,200)}...
                                     </p>
-                                    <h4>$5.00</h4>
+                                    <h6>$5.00</h6>
                                 </div>
                                 <div class="card-action">
                                     <div class="center-align">
-                                        <a class="btn orange center-align" href="!#">Buy ticket</a>
+                                        <a class="btn orange center-align" target="_blank" href="${event.url}">Buy ticket</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
-                    
-                    <div id="eventCards"></div>
-                    <div class="col l4 m6 s12">
-                        <div class="card orange lighten-4">
-                            <div class="card-image">
-                                <img class="materialboxed" src="img/img6.jpg" width="100%" data-caption="Info goes here">
-                                <a class="btn-floating halfway-fab waves-effect waves-light red tooltipped" data-position="bottom" data-tooltip="Add to favourites">
-                                    <i class="material-icons add-to-favorites"> favorite_border </i>
-                                </a>
-                            </div>
-                            <div class="card-content">
-                                <h5 class="green-text">FIRST CARD</h5>
-                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
-                                    I require little markup to use effectively.I am a very simple card. I am good at containing
-                                    small bits of information.
-                                </p>
-                                <h6>$5.00</h6>
-                            </div>
-                            <div class="card-action">
-                                <div class="center-align">
-                                    <a class="btn orange center-align" href="!#">Buy ticket</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END FIRST CARD -->
-                    <div class="col l4 m6 s12">
-                        <div class="card  lime accent-3">
-                            <div class="card-image">
-                                <img src="img/img6.jpg">
-                                <a class="btn-floating halfway-fab waves-effect waves-light red">
-                                    <i class="material-icons add-to-favorites">favorite_border</i>
-                                </a>
-                            </div>
-                            <div class="card-content">
-                                <h5 class="green-text">Card Title</h5>
-                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
-                                    I require little markup to use effectively.I am a very simple card. I am good at containing
-                                    small bits of information.
-                                </p>
-                                <h4>$5.00</h4>
-                            </div>
-                            <div class="card-action">
-                                <div class="center-align">
-                                    <a class="btn purple lighten-2 center-align" href="!#">Buy ticket</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col l4 m6 s12">
-                        <div class="card amber lighten-4">
-                            <div class="card-image">
-                                <img src="img/img6.jpg">
-                                <a class="btn-floating halfway-fab waves-effect waves-light red">
-                                    <i class="material-icons heart add-to-favorites">favorite_border</i>
-                                </a>
-                            </div>
-                            <div class="card-content">
-                                <h5 class="green-text">Card Title</h5>
-                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
-                                    I require little markup to use effectively.I am a very simple card. I am good at containing
-                                    small bits of information.
-                                </p>
-                                <h4>$5.00</h4>
-                            </div>
-                            <div class="card-action">
-                                <div class="center-align">
-                                    <a class="btn orange center-align" href="!#">Buy ticket</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col l4 m6 s12">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="img/img6.jpg">
-                                <a class="btn-floating halfway-fab waves-effect waves-light red">
-                                    <i class="material-icons add-to-favorites">favorite_border</i>
-                                </a>
-                            </div>
-                            <div class="card-content">
-                                <h5 class="green-text">Card Title</h5>
-                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
-                                    I require little markup to use effectively.I am a very simple card. I am good at containing
-                                    small bits of information.
-                                </p>
-                                <h4>$5.00</h4>
-                            </div>
-                            <div class="card-action">
-                                <div class="center-align">
-                                    <a class="btn orange center-align" href="!#">Buy ticket</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col l4 m6 s12">
-                        <div class="card purple lighten-4">
-                            <div class="card-image">
-                                <img src="img/img6.jpg">
-                                <a class="btn-floating halfway-fab waves-effect waves-light red">
-                                    <i class="material-icons add-to-favorites">favorite_border</i>
-                                </a>
-                            </div>
-                            <div class="card-content">
-                                <h5 class="">Card Title</h5>
-                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
-                                    I require little markup to use effectively.I am a very simple card. I am good at containing
-                                    small bits of information.
-                                </p>
-                                <h4>$5.00</h4>
-                            </div>
-                            <div class="card-action">
-                                <div class="center-align">
-                                    <a class="btn orange center-align" href="!#">Buy ticket</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="col l4 m6 s12">
-                        <div class="card purple lighten-4">
-                            <div class="card-image">
-                                <img src="img/img6.jpg">
-                                <a class="btn-floating halfway-fab waves-effect waves-light orange">
-                                    <i class="material-icons add-to-favorites">favorite_border</i>
-                                </a>
-                            </div>
-                            <div class="card-content">
-                                <h5 class="green-text">Card Title</h5>
-                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
-                                    I require little markup to use effectively.I am a very simple card. I am good at containing
-                                    small bits of information.
-                                </p>
-                                <h4>$5.00</h4>
-                            </div>
-                            <div class="card-action">
-                                <div class="center-align">
-                                    <a class="btn orange center-align" href="!#">Buy ticket</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- END TEST  -->
 
                 </div>
             </div>
@@ -289,7 +195,6 @@
                 <div class="row">
                     <div class="col s12">
                         <h3 class="">Share with friends</h3>
-                        <p class="">Follow us on social media</p>
                         <a href="https://facebook.com" target="_blank" class="orange-text tooltipped" 
                             data-position="bottom" data-tooltip="facebook">
                             <i class="fab fa-facebook fa-5x"></i>
@@ -316,7 +221,8 @@
         </footer>
     <!-- </div>    /END WRAPPER -->
     
-    <!-- MODAL CONTENT  -->
+    <!-- MODALS  -->
+    <!-- REGISTER -->
     <div id="modal_register" class="modal">
         <div class="modal-content">
             <h4>Register</h4>
@@ -326,6 +232,7 @@
             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
         </div>
     </div>
+    <!-- LOGIN -->
     <div id="modal_login" class="modal">
         <div class="modal-content">
             <h4>Modal Header</h4>
@@ -335,7 +242,28 @@
             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
         </div>
     </div>
-    <!-- END MODAL CONTENT -->
+    <!-- LOGIN -->
+    <div id="modal_logout" class="modal">
+            <div class="modal-content center-align">
+                <h5>You have successfully logged out.</h5>
+            </div>
+            <div class="modal-footer">
+            </div>
+    </div>
+    <!-- FAVORITES -->
+    <div id="modal_liked_events" class="modal">
+            <div class="modal-content">
+                <h4>Events you liked: </h4>
+                <p>Event 1</p>
+                <div id="liked-events">
+                    <!-- display liked events here  -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+            </div>
+        </div>
+    <!-- END MODALS  -->
 
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -355,7 +283,11 @@
                 alignment: 'left'
             });
 
-            // jQuery START HERE //
+            
+            // // jQuery START HERE //
+            // // SIDENAV for mobile
+            $('.button-collapse').sideNav();
+
 
             //Initialize AUTOCOMPLETE:
             //TODO make a request to an API for some data of cities and put it here : 
@@ -363,7 +295,9 @@
                 data: {
                     "Sofia": null,
                     "Los Angeles": null,
-                    "Plovdiv": null
+                    "London" : null, 
+                    "New York": null, 
+                    "Plovdiv": null, 
                 },
                 limit: 10
             })
@@ -387,8 +321,8 @@
             });
 
             //Initialize TOAST
-            var toastHTML =
-                '<button class="btn-flat white-text toast-action">Added to favourites</button>';
+            //code for the toast button appearing when heart is clicked
+            var toastHTML = '<button class="btn-flat white-text toast-action">Added to favourites</button>';
             $('.add-to-favorites').click(function () {
                 Materialize.toast(toastHTML, 2000, 'rounded');
             });
