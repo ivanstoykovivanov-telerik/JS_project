@@ -2,6 +2,8 @@ export class EventAPI{
    
     constructor(){
        this.auth_token = 'JEAFOUYZOQRHEN4RKL32'; 
+       this.orderByDate = 'date';
+       this.orderByBest = 'best'
        //this.city = city; 
    }
    
@@ -15,12 +17,13 @@ export class EventAPI{
         const categories = await returnedCategories.json();   //as json 
         return categories ; 
 
-   }
+    }
 
-   //find events methods: 
-//    queryAPI(){
-//     const url = await fetch(`url`);
-//     const res = await url.json();
-//     return res;
-//    } 
+    async getEventsByCityAndCategory(city, category){
+        const eventsR = await fetch(`https://www.eventbriteapi.com/v3/events/search/?q=${city}&sort_by=date&categories=${category}&token=${this.auth_token}`);
+        const events = await eventsR.json(); 
+
+        return events; 
+    }
+
 }   

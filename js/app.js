@@ -19,8 +19,25 @@ document.querySelector("#searchBtn").addEventListener('click', (e) => {
     //VALIDATE: 
     if(city !== ''){
         console.log("success");
+        //QUERY
+        api.getEventsByCityAndCategory(city, category)
+            .then(events => {
+                const eventsLength = events.events.length;
+                const eventsList = events.events; 
+                console.log(events.events);
+                console.log(eventsLength);
+
+                if(eventsLength > 0){
+                    //PRINT THE EVENTS: 
+                    ui.displayEvents(eventsList);         
+                }else{
+                    ui.displayErrorMessage("No events found");    
+                }
+            });
     }else{
         console.log("empty credentials");
+        
+        //Handle ERROR MESSAGE:
         ui.displayErrorMessage("Please, fill in the name of the city.");
     }
     
