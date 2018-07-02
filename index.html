@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,215 +21,218 @@
     <title>Evento</title>
 </head>
 
-<body>  
+<body>
     <!-- NAVBAR -->
     <header class="main-header">
         <!-- <div class="navbar-fixed"> -->
-            <nav class="transparent">
-                <div class="container">
-                    <div class="nav-wrapper">   
-                        <a href="#" class="brand-logo black-text"></a> <!-- name of the app or logo -->
-                        <a href="#" data-activates="mobile-nav" class="button-collapse">
-                            <i class="fa fa-bars"></i>  
-                        </a>
-                        <ul class="right hide-on-med-and-down">
-                            <li>
-                                <a href="" class="btn modal-trigger orange" data-target="modal_liked_events">Favourites</a>
-                            </li>
-                            <li>
-                                <a href="" class="btn modal-trigger orange" data-target="modal_register">Register</a>
-                            </li>
-                            <li>
-                                <a href="" class="btn modal-trigger orange" data-target="modal_login">Login</a>
-                            </li>
-                            <li>
-                                <a href="" class="btn modal-trigger orange" data-target="modal_logout">Logout</a>
-                            </li>
-                        </ul>
-                        <!-- MOBILE NAV -->
-                        <ul class="side-nav" id="mobile-nav">
-                            <h4 class="black-text text-darken-4 center logo-mobile">Evento</h4>
-                            <li>
-                                <div class="divider"></div>
-                            </li>
-                            <li>
-                                <a href="" class="modal-trigger" data-target="modal_liked_events">
-                                    <i class="far fa-heart  modal-trigger" ><span class="content">Favourites</span></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="" class="modal-trigger" data-target="modal_register">
-                                    <i class="fas fa-user-plus" ><span class="content">Register</span></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="" class="modal-trigger" data-target="modal_logout">
-                                    <i class="fas fa-sign-out-alt" ><span class="content">Logout</span></i>
-                                </a>
-                            </li>
-                            <li>
-                                <div class="divider black-text"></div>
-                            </li>
-                            <li>
-                                <a href="" class="btn modal-trigger orange white-text" data-target="modal_login">Login</a>
-                            </li>
-                        </ul>
-                    </div>
+        <nav class="transparent">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo black-text"></a>
+                    <!-- name of the app or logo -->
+                    <a href="#" data-activates="mobile-nav" class="button-collapse">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a href="" id="favorites" class="btn modal-trigger orange" data-target="modal_liked_events">Favourites</a>
+                        </li>
+                        <li>
+                            <a href="" class="btn modal-trigger orange" data-target="modal_register">Register</a>
+                        </li>
+                        <li>
+                            <a href="" class="btn modal-trigger orange" data-target="modal_login">Login</a>
+                        </li>
+                        <li>
+                            <a href="" class="btn modal-trigger orange" data-target="modal_logout">Logout</a>
+                        </li>
+                    </ul>
+                    <!-- MOBILE NAV -->
+                    <ul class="side-nav" id="mobile-nav">
+                        <h4 class="black-text text-darken-4 center logo-mobile">Evento</h4>
+                        <li>
+                            <div class="divider"></div>
+                        </li>
+                        <li>
+                            <a href="" class="modal-trigger" data-target="modal_liked_events">
+                                <i class="far fa-heart  modal-trigger">
+                                    <span class="content">Favourites</span>
+                                </i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="modal-trigger" data-target="modal_register">
+                                <i class="fas fa-user-plus">
+                                    <span class="content">Register</span>
+                                </i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="modal-trigger" data-target="modal_logout">
+                                <i class="fas fa-sign-out-alt">
+                                    <span class="content">Logout</span>
+                                </i>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="divider black-text"></div>
+                        </li>
+                        <li>
+                            <a href="" class="btn modal-trigger orange white-text" data-target="modal_login">Login</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
+            </div>
+        </nav>
         <!-- </div>     -->
     </header>
     <!-- END NAVBAR -->
-    
+
     <section class="section-search center">
-            <div class="container">
-                <div class="row">
-                    <div class="col s12">
-                        <div class="title-main">Evento</div>
-                        <h4 class="">Feel the pulse of your city</h4>
-                    </div>
-                </div>
-                <div class="row">
-                    <form class="search-form col s6 offset-s3 card-panel">
-                        <div class="input-field col s12">
-                            <input placeholder="City:" id="city" type="text" class="autocomplete">
-                            <label for="city"></label>
-                        </div>
-                        <div class="input-field col s12">
-                            <select id="category">
-                                <option value="Category" disabled selected>Choose your interest:</option>
-                            </select>
-                            <label>Event Categories:</label>
-                        </div>
-                        <div class="input-field col s12">
-                            <input type="text" id="date" class="datepicker" placeholder="Date: ">
-                        </div>
-                        <div class="input-field col s12">
-                            <input type="text" id="time" class="timepicker" placeholder="Time: ">
-                        </div>
-                    </form>
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <div class="title-main">Evento</div>
+                    <h4 class="">Feel the pulse of your city</h4>
                 </div>
             </div>
-        </section>
-
-        <section class="search_icon">
-            <div class="container">
-                <div class="row">
-                    <div class="col s12 center-align">
-                        <button id="searchBtn" class="btn-floating btn-large orange text-green pulse tooltipped" data-position="bottom" data-tooltip="Search events">
-                            <i class="material-icons"> search</i>
-                        </button>
+            <div class="row">
+                <form class="search-form col s6 offset-s3 card-panel">
+                    <div class="input-field col s12">
+                        <input placeholder="City:" id="city" type="text" class="autocomplete">
+                        <label for="city"></label>
                     </div>
+                    <div class="input-field col s12">
+                        <select id="category">
+                            <option value="Category" disabled selected>Choose your interest:</option>
+                        </select>
+                        <label>Event Categories:</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input type="text" id="date" class="datepicker" placeholder="Date: ">
+                    </div>
+                    <div class="input-field col s12">
+                        <input type="text" id="time" class="timepicker" placeholder="Time: ">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="search_icon">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button id="searchBtn" class="btn-floating btn-large orange text-green pulse tooltipped" data-position="bottom" data-tooltip="Search events">
+                        <i class="material-icons"> search</i>
+                    </button>
                 </div>
-            </div>   
-        </section>
-        <section>
-            <div class="container">
-                <div class="row">
-                    
-                    <div id="eventCards">
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+
+                <div id="eventCards">
                     <!-- DATA FROM API COMES HERE  -->
-                    </div>
-                    
-                    <!-- GENERIC CARD  -->
-                    <div class="col l4 m6 s12">
-                        <div class="card purple lighten-4 float">
-                            <div class="card-image">
-                                <img src="img/img6.jpg"  class="materialboxed" width="100%" data-caption="Info goes here">
-                                <a class="btn-floating halfway-fab waves-effect waves-light red">
-                                    <i class="material-icons add-to-favorites">favorite_border</i>
-                                </a>
+                </div>
+
+                <!-- GENERIC CARD  -->
+                <div class="col l4 m6 s12">
+                    <div class="card purple lighten-4 float">
+                        <div class="card-image">
+                            <img src="img/img6.jpg" class="materialboxed" width="100%" data-caption="Info goes here">
+                            <a class="btn-floating halfway-fab waves-effect waves-light red">
+                                <i class="material-icons add-to-favorites">favorite_border</i>
+                            </a>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Card Title Materialize </span>
+                            <div class="event-description">
+                                I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup
+                                to use effectively.I am a very simple card. I am good at containing small bits of information.
                             </div>
-                            <div class="card-content">
-                                <span class="card-title">Card Title Materialize </span>
-                                <div class="event-description">
-                                        I am a very simple card. I am good at containing small bits of information. I am convenient because
-                                        I require little markup to use effectively.I am a very simple card. I am good at containing
-                                        small bits of information.
-                                </div>
-                            </div>
-                            <div class="card-action">
-                                <div class="center-align">
-                                    <a class="btn orange center-align" href="!#">Buy ticket</a>
-                                </div>
+                        </div>
+                        <div class="card-action">
+                            <div class="center-align">
+                                <a class="btn orange center-align" href="!#">Buy ticket</a>
                             </div>
                         </div>
                     </div>
-                    <!-- END GENERIC CARD  -->
+                </div>
+                <!-- END GENERIC CARD  -->
 
-                    <!-- TEST  -->
-                    <div class="col l4 m6 s12">
-                            <div class="card purple lighten-4">
-                                <div class="card-image">
-                                    <img class="materialboxed"  
-                                        src="${event.logo !== null ? event.logo.url : ''}" 
-                                        width="100%" data-caption="Info goes here">
-                                    <a class="btn-floating halfway-fab waves-effect waves-light red tooltipped" 
-                                        data-position="bottom" data-tooltip="Add to favourites">
-                                        <i class="material-icons add-to-favorites"> favorite_border </i>
-                                    </a>
-                                </div>
-                                <div class="card-content">
-                                    <h5 class="black-text">
-                                        ${event.name.text}
-                                    </h5>
-                                    <h6>
-                                        Date: ${event.start.local}
-                                    </h6>
-                                    <p>
-                                        ${event.description.text.substring(0,200)}...
-                                    </p>
-                                    <h6>$5.00</h6>
-                                </div>
-                                <div class="card-action">
-                                    <div class="center-align">
-                                        <a class="btn orange center-align" target="_blank" href="${event.url}">Buy ticket</a>
-                                    </div>
-                                </div>
+                <!-- TEST  -->
+                <div class="col l4 m6 s12">
+                    <div class="card purple lighten-4">
+                        <div class="card-image">
+                            <img class="materialboxed" src="${event.logo !== null ? event.logo.url : ''}" width="100%" data-caption="Info goes here">
+                            <a class="btn-floating halfway-fab waves-effect waves-light red tooltipped" data-position="bottom" data-tooltip="Add to favourites">
+                                <i class="material-icons add-to-favorites"> favorite_border </i>
+                            </a>
+                        </div>
+                        <div class="card-content">
+                            <h5 class="black-text">
+                                ${event.name.text}
+                            </h5>
+                            <h6>
+                                Date: ${event.start.local}
+                            </h6>
+                            <p>
+                                ${event.description.text.substring(0,200)}...
+                            </p>
+                            <h6>$5.00</h6>
+                        </div>
+                        <div class="card-action">
+                            <div class="center-align">
+                                <a class="btn orange center-align" target="_blank" href="${event.url}">Buy ticket</a>
                             </div>
                         </div>
-                    <!-- END TEST  -->
-
-                </div>
-            </div>
-        </section>
-        <footer class="center">
-            <div class="container">
-                <div class="row">
-                    <div class="col s12">
-                        <h3 class="">Share with friends</h3>
-                        <a href="https://facebook.com" target="_blank" class="orange-text tooltipped" 
-                            data-position="bottom" data-tooltip="facebook">
-                            <i class="fab fa-facebook fa-5x"></i>
-                        </a>
-                        <a href="https://linkedin.com" target="_blank" class="orange-text tooltipped"
-                            data-position="bottom" data-tooltip="linkedIn">
-                            <i class="fab fa-linkedin fa-5x"></i>
-                        </a>
-                        <a href="https://twitter.com" target="_blank" class="orange-text tooltipped"
-                            data-position="bottom" data-tooltip="twitter">
-                            <i class="fab fa-twitter fa-5x"></i>
-                        </a>
-                        <a href="https://googleplus.com" target="_blank" class="orange-text tooltipped"
-                            data-position="bottom" data-tooltip="googleplus">
-                            <i class="fab fa-google-plus fa-5x"></i>
-                        </a>
-                        <a href="https://pinterest.com" target="_blank" class="orange-text tooltipped"
-                            data-position="bottom" data-tooltip="pinterest">
-                            <i class="fab fa-pinterest fa-5x"></i>
-                        </a>
                     </div>
                 </div>
+                <!-- END TEST  -->
+
             </div>
-        </footer>
+        </div>
+    </section>
+    <footer class="center">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <h3 class="">Share with friends</h3>
+                    <a href="https://facebook.com" target="_blank" class="orange-text tooltipped" data-position="bottom" data-tooltip="facebook">
+                        <i class="fab fa-facebook fa-5x"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="orange-text tooltipped" data-position="bottom" data-tooltip="linkedIn">
+                        <i class="fab fa-linkedin fa-5x"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="orange-text tooltipped" data-position="bottom" data-tooltip="twitter">
+                        <i class="fab fa-twitter fa-5x"></i>
+                    </a>
+                    <a href="https://googleplus.com" target="_blank" class="orange-text tooltipped" data-position="bottom" data-tooltip="googleplus">
+                        <i class="fab fa-google-plus fa-5x"></i>
+                    </a>
+                    <a href="https://pinterest.com" target="_blank" class="orange-text tooltipped" data-position="bottom" data-tooltip="pinterest">
+                        <i class="fab fa-pinterest fa-5x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
     <!-- </div>    /END WRAPPER -->
-    
+
     <!-- MODALS  -->
     <!-- REGISTER -->
     <div id="modal_register" class="modal">
         <div class="modal-content blue darken-2">
-            <h3 class="center-align white-text">Register</h3>
+            <h4 class="center-align white-text">Register</h4>
             <form>
+                <div class="input-field">
+                    <i class="material-icons prefix">person</i>
+                    <input type="text" id="name">
+                    <label class="white-text" for="name">Name</label>
+                </div>
                 <div class="input-field">
                     <i class="material-icons prefix">email</i>
                     <input type="email" id="email">
@@ -240,12 +244,12 @@
                     <label class="white-text" for="email">Password</label>
                 </div>
                 <div class="input-field">
-                        <i class="material-icons prefix">lock</i>
-                        <input type="email" id="password">
-                        <label class="white-text" for="email">Repeat Password</label>
-                    </div>
-                <button class="btn btn-large orange white-text login-btn waves-effect">
-                    <i class="fas fa-sign-in-alt"></i>
+                    <i class="material-icons prefix">lock_open</i>
+                    <input type="email" id="password">
+                    <label class="white-text" for="email">Repeat Password</label>
+                </div>
+                <button class="btn btn-med orange login-btn waves-effect waves-green">
+                    <i class="fas fa-user-plus center-align"></i>
                 </button>
             </form>
         </div>
@@ -253,7 +257,7 @@
     <!-- LOGIN -->
     <div id="modal_login" class="modal">
         <div class="modal-content login blue darken-2">
-            <h3 class="center-align white-text">Login</h3>
+            <h4 class="center-align white-text">Login</h4>
             <form>
                 <div class="input-field">
                     <i class="material-icons prefix">email</i>
@@ -265,7 +269,7 @@
                     <input type="email" id="password">
                     <label class="white-text" for="email">Password</label>
                 </div>
-                <button class="btn btn-large orange white-text login-btn">
+                <button class="btn btn-med orange login-btn">
                     <i class="fas fa-sign-in-alt"></i>
                 </button>
             </form>
@@ -273,24 +277,72 @@
     </div>
     <!-- LOGOUT -->
     <div id="modal_logout" class="modal">
-            <div class="modal-content center-align">
-                <h5>You have successfully logged out.</h5>
-            </div>
-            <div class="modal-footer">
-            </div>
+        <div class="modal-content center-align blue darken-2">
+            <h5 class="center-align white-text">You have successfully logged out.</h5>
+        </div>
     </div>
     <!-- FAVORITES -->
     <div id="modal_liked_events" class="modal">
-            <div class="modal-content">
-                <h4>Events you liked: </h4>
-                <p>Event 1</p>
-                <div id="liked-events">
-                    <!-- display liked events here  -->
+        <div class="modal-content  blue darken-1">
+            <ul class="collection with-header">
+                <li class="collection-header">
+                    <h4>Liked Events</h4>
+                </li>
+                <div id="favoritesToDisplay">
+                    
                 </div>
-            </div>
-            <div class="modal-footer">
-                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-            </div>
+                <li class="collection-item">
+                    <div>Event 1 
+                        <!-- <span class=> -->
+                            <a href="#!" class="right-alignment">
+                                    <i class="material-icons green-text">link</i>
+                                </a>
+                                <a href="#!" class="right-align"></a>
+                                    <i class="material-icons red-text">close</i>
+                                </a>
+                        <!-- </span> -->
+                    </div>
+                </li>
+                <!-- <li class="collection-item">
+                    <div>Event 1
+                        <a href="#!" class="secondary-content">
+                            <i class="material-icons red-text">close</i>
+                        </a>
+                    </div>
+                </li>
+                <li class="collection-item">
+                    <div>Event 1
+                        <a href="#!" class="secondary-content">
+                            <i class="material-icons red-text">close</i>
+                        </a>
+                    </div>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- <div class="card blue darken-2">
+                <div class="card-content blue darken-2"> -->
+    <!-- <span class="white-text">Events you liked</span>
+                    <ul class="collection">
+                        <li class="collection-item">
+                            <div>Title of Event 1</div>
+                            <a href="" class="secondary-content delete">
+                                <i class="material-icons">close</i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="collection">
+                        <li class="collection-item">
+                            <div>Title of Event 1</div>
+                            <a href="" class="secondary-content delete">
+                                <i class="material-icons">close</i>
+                            </a>
+                        </li>
+                    </ul> -->
+    <!-- </div> -->
+    <!-- </div> -->
+    </div>
     </div>
     <!-- END MODALS  -->
 
@@ -299,11 +351,11 @@
     <script type="text/javascript" src="js/materialize.min.js"></script>
 
     <!-- JS Scripts/ Modules -->
-    <script src="js/app.js"  type="module"></script>
-   
+    <script src="js/app.js" type="module"></script>
+
 
     <!-- JQUERY FOR MATERIALIZE.CSS  -->
-   <script>
+    <script>
         $(document).ready(function () {
             $('.dropdown-button').dropdown({
                 constrainWidth: false,
@@ -312,11 +364,9 @@
                 alignment: 'left'
             });
 
-            
             // // jQuery START HERE //
             // // SIDENAV for mobile
             $('.button-collapse').sideNav();
-
 
             //Initialize AUTOCOMPLETE:
             //TODO make a request to an API for some data of cities and put it here : 
@@ -324,16 +374,18 @@
                 data: {
                     "Sofia": null,
                     "Los Angeles": null,
-                    "London" : null, 
-                    "New York": null, 
-                    "Plovdiv": null, 
+                    "London": null,
+                    "Moscow": null,
+                    "New York": null,
+                    "Plovdiv": null,
+                    "Berlin": null,
+                    "Barcelona": null,
                 },
                 limit: 10
             })
 
             //Initialize SELECT
             $('select').material_select();
-
 
             // Initialize DATEPICKER : 
             $('.datepicker').pickadate({
@@ -354,8 +406,9 @@
             var toastHTML = '<button class="btn-flat white-text toast-action">Added to favourites</button>';
             $('.add-to-favorites').click(function () {
                 Materialize.toast(toastHTML, 2000, 'rounded');
+                // console.log($(this));
+                // console.log(e);
             });
-
 
             //Initialize TOOLTIP
             $('.tooltipped').tooltip({
@@ -371,8 +424,13 @@
                     console.log("Modal opened", modal, trigger);
                 }
             });
+
+            //Liked events
+           
+
+
         });
     </script>
 </body>
-</html>
 
+</html>

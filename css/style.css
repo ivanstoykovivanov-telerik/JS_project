@@ -169,14 +169,25 @@ footer p {
   font-weight:bold; 
 }
 
-/********* LOGIN *********/
-.login{
+
+/*** PICKERS  *******/ 
+/* .login{
   border-left: 0px;
+} */
+.picker__date-display{
+  background-color: #1275CD ; 
 }
+
+/********* LOGIN *********/
+
 
 .login-btn{
   display: block; 
   width: 15%; 
-  margin: auto; 
+  margin: auto;   
   margin-top: 20px; 
+}
+
+.login-btn:hover{
+  background-color: rgb(236, 122, 9) !important;
 }

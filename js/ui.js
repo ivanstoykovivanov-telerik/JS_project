@@ -5,6 +5,7 @@ export class  UI{
     constructor(){
         this.EventAPI = new EventAPI(); 
         this.init();
+        this.favoriteEvents = [];
     }
 
     init(){
@@ -48,7 +49,7 @@ export class  UI{
                                 width="100%" data-caption="Info goes here">
                             <a class="btn-floating halfway-fab waves-effect waves-light red tooltipped" 
                                 data-position="bottom" data-tooltip="Add to favourites">
-                                <i class="material-icons add-to-favorites"> favorite_border </i>
+                                <i class="material-icons add-to-favorites" event_name="${event.name.text}" event_url = "${event.url}"> favorite_border </i>
                             </a>
                         </div>
                         <div class="card-content">
@@ -95,6 +96,48 @@ export class  UI{
     removeMessage(){
         //remove the error message        
     }
+
+    addToFavorites(eventName, eventURL){
+        const favoriteEvent = {
+                name: eventName,
+                url : eventURL
+        }; 
+        this.favoriteEvents.push(favoriteEvent); 
+        console.log(this.favoriteEvents);
+        this.displayFavoriteEvents(); 
+    }
+
+    removeFromFavorites(){
+        
+    }
+
+    displayFavoriteEvents(){
+        let html = "";
+        if(this.favoriteEvents.length  > 0){
+            this.favoriteEvents.forEach(event => {
+                html += `
+                    <li class="collection-item">
+                        <div>${event.name} 
+                            <!-- <span class=> -->
+                                <a href="${event.url}" class="right-alignment">
+                                        <i class="material-icons green-text">link</i>
+                                    </a>
+                                    <a href="#!" class="right-align"></a>
+                                        <i class="material-icons red-text">close</i>
+                                    </a>
+                            <!-- </span> -->
+                        </div>
+                    </li>
+                `
+            });
+        }
+         document.querySelector("#favoritesToDisplay").innerHTML = html; 
+    }
+
+    fetchEventById(id){
+        //connect to the API and get the event
+    }
+
 }
 
 

@@ -26,4 +26,8 @@ export class EventAPI{
         return events; 
     }
 
+    async getEventById(id){
+        
+    }
+
 }   
