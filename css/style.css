@@ -175,7 +175,7 @@ footer p {
   border-left: 0px;
 } */
 .picker__date-display{
-  background-color: #1275CD ; 
+  background-color: #1275CD ;   
 }
 
 /********* LOGIN *********/
@@ -190,4 +190,9 @@ footer p {
 
 .login-btn:hover{
   background-color: rgb(236, 122, 9) !important;
+}
+
+
+.delete_favorite:hover{
+  cursor: pointer;
 }

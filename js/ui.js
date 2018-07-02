@@ -4,8 +4,8 @@ export class  UI{
     
     constructor(){
         this.EventAPI = new EventAPI(); 
-        this.init();
         this.favoriteEvents = [];
+        this.init();  // must be the last one ; 
     }
 
     init(){
@@ -76,6 +76,7 @@ export class  UI{
         this.eventsHTML.innerHTML = html
     }
 
+    //see if you really need it 
     displayErrorMessage(content, id){
             const div = document.createElement('div');
             div.className = "red";
@@ -98,7 +99,9 @@ export class  UI{
     }
 
     addToFavorites(eventName, eventURL){
+        const id = this.favoriteEvents.length;      
         const favoriteEvent = {
+                id: id, 
                 name: eventName,
                 url : eventURL
         }; 
@@ -119,11 +122,11 @@ export class  UI{
                     <li class="collection-item">
                         <div>${event.name} 
                             <!-- <span class=> -->
-                                <a href="${event.url}" class="right-alignment">
+                                <a href="${event.url}" target="_blank" class="right-alignment">
                                         <i class="material-icons green-text">link</i>
                                     </a>
-                                    <a href="#!" class="right-align"></a>
-                                        <i class="material-icons red-text">close</i>
+                                    <a href="#!"  class="btn right-alignment delete" event_id="${event.id}">
+                                        <i class="material-icons red-text" event_id="${event.id}">close</i>
                                     </a>
                             <!-- </span> -->
                         </div>
@@ -132,6 +135,15 @@ export class  UI{
             });
         }
          document.querySelector("#favoritesToDisplay").innerHTML = html; 
+         //ADD EVENT LISTTENER TO DELETE EVENTS: 
+        //  document.querySelector(".delete").addEventListener("click", function(e){
+        //     // console.log(e.target);
+        //     console.log("Attributes:");
+        //     console.log(e.target.attributes);
+        //     console.log("Value:");
+        //     console.log(e.target.attributes.event_id.value);
+        // });   
+          
     }
 
     fetchEventById(id){

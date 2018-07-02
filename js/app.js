@@ -2,7 +2,6 @@ import { EventAPI } from "./EventAPI.js";
 import { UI } from "./ui.js";
 
 
-
 const api = new EventAPI();
 const ui = new UI(); 
 
@@ -31,8 +30,7 @@ document.querySelector("#searchBtn").addEventListener('click', (e) => {
                     //Show the event cards : 
                     ui.displayEvents(eventsList);
                     
-                    //Add event listeners for the new cards: 
-                    //TOASTS
+                    //Add event listeners to show TOASTS for the new cards: 
                     var toastHTML = '<button class="btn-flat white-text toast-action">Added to favourites</button>';
                     $('.add-to-favorites').click(function () {
                         Materialize.toast(toastHTML, 2000, 'rounded');
@@ -44,11 +42,9 @@ document.querySelector("#searchBtn").addEventListener('click', (e) => {
                         // console.log(eventID2);
                         console.log(eventName);
                         console.log(eventURL);
-                        ui.addToFavorites(eventName,eventURL);  
+                        ui.addToFavorites(eventName, eventURL);  
                     });
-
                     //MATERIALBOX
-
                 }else{
                     ui.displayErrorMessage("No events found");    
                 }
@@ -62,48 +58,4 @@ document.querySelector("#searchBtn").addEventListener('click', (e) => {
     
 });
 
-
-
-
-// // console.log(UI);
-
-// UI.city.addEventListener('submit', (e)=> {
-//     e.preventDefault(); 
-
-//     //read the data
-//     const city = UI.cityInput.value, 
-//           date = UI.dateInput.value,   
-//           time = UI.timeInput;
-    
-//     //check       
-//     // console.log(city, date, time);
-          
-//     //validate form 
-//     if(city === '' ){
-//         UI.messageDiv.innerHTML = "Error...City name is mandatory ";
-//         UI.messageDiv.classList.add('error');
-//         setTimeout( () => {
-//             UI.messageDiv.innerHTML = '';
-//             UI.messageDiv.classList.remove('error');
-
-//         }, 3000); 
-//     }else{
-//         //Query the API 
-//     }
-
-// })
-
-
-
-
-
-
-
-
-
-
-//EVENTBRITE : 
-// const eventBrite = new EventBriteAuthenticator(); 
-// console.log(eventBrite);
-// console.log("Test");
 

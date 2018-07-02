@@ -284,9 +284,9 @@
     <!-- FAVORITES -->
     <div id="modal_liked_events" class="modal">
         <div class="modal-content  blue darken-1">
-            <ul class="collection with-header">
+            <ul class="collection with-header favorites_to_delete">
                 <li class="collection-header">
-                    <h4>Liked Events</h4>
+                    <h4 class="center-align">Liked Events</h4>
                 </li>
                 <div id="favoritesToDisplay">
                     
@@ -296,10 +296,10 @@
                         <!-- <span class=> -->
                             <a href="#!" class="right-alignment">
                                     <i class="material-icons green-text">link</i>
-                                </a>
-                                <a href="#!" class="right-align"></a>
-                                    <i class="material-icons red-text">close</i>
-                                </a>
+                            </a>
+                            <a href="#!" class="right-align delete_favorite"></a>
+                                <i class="material-icons red-text">close</i>
+                            </a>
                         <!-- </span> -->
                     </div>
                 </li>
@@ -320,28 +320,6 @@
             </ul>
         </div>
     </div>
-
-    <!-- <div class="card blue darken-2">
-                <div class="card-content blue darken-2"> -->
-    <!-- <span class="white-text">Events you liked</span>
-                    <ul class="collection">
-                        <li class="collection-item">
-                            <div>Title of Event 1</div>
-                            <a href="" class="secondary-content delete">
-                                <i class="material-icons">close</i>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="collection">
-                        <li class="collection-item">
-                            <div>Title of Event 1</div>
-                            <a href="" class="secondary-content delete">
-                                <i class="material-icons">close</i>
-                            </a>
-                        </li>
-                    </ul> -->
-    <!-- </div> -->
-    <!-- </div> -->
     </div>
     </div>
     <!-- END MODALS  -->
@@ -425,8 +403,20 @@
                 }
             });
 
-            //Liked events
-           
+            //DELETE EVENT FROM FAVORITES
+            //Event delegation
+            $('.favorites_to_delete').on('click','.delete', function(e){
+                $(this).parent().parent().remove(); 
+                console.log("Elements:");
+                console.log($(this).parent());
+                console.log($(this).parent().parent());
+                
+                //TODO remove from the array   !!!
+
+
+                console.log("Deleted");
+                e.preventDefault(); 
+            });     
 
 
         });

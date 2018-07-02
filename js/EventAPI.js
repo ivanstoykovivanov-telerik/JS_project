@@ -27,7 +27,7 @@ export class EventAPI{
     }
 
     async getEventById(id){
-        
+        const event = await fetch()
     }
 
 }   
