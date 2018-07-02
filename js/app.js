@@ -34,8 +34,6 @@ document.querySelector("#searchBtn").addEventListener('click', (e) => {
                     var toastHTML = '<button class="btn-flat white-text toast-action">Added to favourites</button>';
                     $('.add-to-favorites').click(function () {
                         Materialize.toast(toastHTML, 2000, 'rounded');
-                        // var eventID1 = $(this)[0].attributes.number.nodeValue; 
-                        // var eventID2 = $(this)[0].attributes.number.textContent; 
                         var eventName = $(this)[0].attributes.event_name.value; 
                         var eventURL = $(this)[0].attributes.event_URL.value; 
                         // console.log(eventID1);
