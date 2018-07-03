@@ -4,7 +4,7 @@
 /******** REGISTER FORM   *********/
 
 /* validation error message  */
-#register-form .input-field div.error{
+#register-form .input-field div.invalid{
     position: relative;
     top: -1rem;
     left: 0rem;
@@ -28,10 +28,10 @@
       background-color: greenyellow; 
   } */
 
-  .helper-text{
+  /* .helper-text{
       color :red; 
       font-size: 2em; 
-  }
+  } */
 
 /****/  
   /* label color */
@@ -49,7 +49,7 @@
   }
   /* valid color */
   #register-form .input-field input[type=text].valid {
-    border-bottom: 3px solid green;
+    border-bottom: 10px solid green;
     box-shadow: 0 1px 0 0 green;
   }
   /* invalid color */

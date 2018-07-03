@@ -1,4 +1,5 @@
 //VALIDATE REGISTRATION FORM 
+// FROM : https://jqueryvalidation.org/
 console.log("found: register-form ");
 
 $("#register-form").validate({
@@ -40,6 +41,8 @@ $("#register-form").validate({
             minlength: "Enter at least 10 characters"
         }
     },
+    errorClass: "invalid",
+    validClass: "valid", 
     errorElement: 'div',
     errorPlacement: function (error, element) {
         var placement = $(element).data('error');
