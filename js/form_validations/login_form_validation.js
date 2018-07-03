@@ -1,35 +1,17 @@
 //VALIDATE REGISTRATION FORM 
 // FROM : https://jqueryvalidation.org/
-console.log("found: register-form ");
+console.log("found: login-form ");
 
-$("#register-form").validate({
+$("#login-form").validate({
     rules: {
         username: {
             required: true,
             minlength: 5
         },
-        email: {
-            required: true,
-            email: true,
-            minlength: 10
-        },  
         password: {
             required: true,
             minlength: 5
         },
-        rpassword: {
-            required: true,
-            minlength: 5,
-            equalTo: "#password"
-        },
-        //
-        // interests:"required", 
-        //
-        // background: "required",
-        //
-        // gender: "required",
-        //
-        agree: "required",
     },
     //For custom messages
     messages: {
@@ -37,9 +19,9 @@ $("#register-form").validate({
             required: "Username is required",
             minlength: "Enter at least 5 characters"
         },
-        email: {
-            required: "Email address is required",
-            minlength: "Enter at least 10 characters"
+        password: {
+            required: "Password is required",
+            minlength: "Password should be at least 5 characters"
         }
     },
     errorClass: "invalid",

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <!-- <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection" /> -->
+    <link type="text/css" rel="stylesheet" href="css/forms.css" media="screen,projection" />
+    <!-- add roboto font  ??? -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evento</title>
+</head>
+
+<body>
+    <div class="container">
+        <form id="register-form" action novalidate="novalidate">
+            <div class="input-field s12">
+                <i class="material-icons prefix">person</i>
+                <input id="username" name="username" type="text" data-error=".errorTxt1">
+                <div class="errorTxt1"></div>
+                <label class="white-text" for="username">Username</label>
+            </div>
+            <div class="input-field s12">
+                <i class="material-icons prefix">email</i>
+                <input id="email" name="email" type="email" data-error=".errorTxt2">
+                <label class="white-text" for="email">Email</label>
+                <div class="errorTxt2"></div>
+            </div>
+            <div class="input-field">
+                <i class="material-icons prefix">lock</i>
+                <input id="password" name="password" type="password" data-error=".errorTxt3">
+                <label class="white-text" for="password">Password</label>
+                <div class="errorTxt3"></div>
+            </div>
+            <div class="input-field">
+                <i class="material-icons prefix">lock_open</i>
+                <input id="repassword" name="repassword" type="password" data-error=".errorTxt4">
+                <label class="white-text" for="repassword">Repeat Password</label>
+                <div class="errorTx4"></div>
+            </div>
+            <div class="reg-form-part-2">
+
+
+                <div class="row">
+                    <div class="col s5">
+                        <div class="input-field">
+                            <select multiple id="interests" name="interests" >
+                                <option value="" disabled selected>Choose your areas of interest</option>
+                                <option value="1">Art</option>
+                                <option value="2">Theater</option>
+                                <option value="3">Film</option>
+                                <option value="4">Music</option>
+                                <option value="5">Photography</option>
+                                <option value="6">Dance</option>
+                                <option value="7">Sculpture</option>
+                            </select>
+                            <label>Your areas of interes: </label>
+                            <div class="errorTx5"></div>
+                        </div>
+                    </div>
+                    <div class="col s5 offset-s2">
+                        <div class="input-field">
+                            <select class="error" id="background" name="background" data-error=".errorTxt6">
+                                <option value="" disabled="" selected="">Choose your background</option>
+                                <option value="1">Student</option>
+                                <option value="2">Young professional</option>
+                                <option value="3">Retired</option>
+                            </select>
+                            <label>Your background: </label>
+                            <div class="input-field">
+                                <div class="errorTxt6"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s4">
+                        <label for="gender_select">Gender </label>
+                        <p>
+                            <input name="gender" type="radio" id="gender_male" >
+                            <label for="gender_male">Male</label>
+                        </p>
+                        <p>
+                            <input name="gender" type="radio" id="gender_female" value="f" class="error">
+                            <label for="gender_female">Female</label>
+                        </p>
+                        <p>
+                            <input name="gender" type="radio" id="gender_other" value="other" class="error">
+                            <label for="gender_other">Other</label>
+                        </p>
+                    </div>
+                    <div class="col s4 offset-s4">
+                        <label for="tnc_select">Service Agreement</label>
+                        <p>
+                            <input type="checkbox" class="checkbox error" id="agree" name="agree" data-error=".errorTxt8">
+                            <label for="agree">Please agree to our policy:</label>
+                        </p>
+                        <div class="input-field">
+                            <div class="errorTxt8"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <button class="btn btn-med orange login-btn waves-effect waves-green">
+                <i class="fas fa-user-plus center-align"></i>
+            </button>
+        </form>
+    </div>
+
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
+    <script src="js/form_validations/register_form_validation.js"></script>
+    <script>
+        $(document).ready(function () {
+            //Initialize SELECT
+            $('select').material_select();
+        });
+    </script>
+</body>
+
+</html>
