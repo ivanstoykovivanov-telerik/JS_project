@@ -5,62 +5,50 @@
 
 /* validation error message  */
 #register-form .input-field div.invalid{
-    position: relative;
-    top: -1rem;
-    left: 0rem;
-    font-size: 1.8rem;
-    font-weight: bold; 
-    color:#FF4081;
-    -webkit-transform: translateY(0%);
+    margin-left: 6%;
+    margin-top: 2px;  
+    font-size: 1.2rem;
+    /* font-weight: bold;  */
+    color:red;
+    /* -webkit-transform: translateY(0%);
     -ms-transform: translateY(0%);
-    -o-transform: translateY(0%);
+    -o-transform: translateY(0%); */
     transform: translateY(0%);
   }
   
-  /* #register-form .input-field label.active{
-      width:100%;
-      /* color: yellow; 
-      border: 2px solid green; 
-  } */
-  
-  /* Works */
-  /* #register-form .input-field input{
-      background-color: greenyellow; 
-  } */
-
-  /* .helper-text{
-      color :red; 
-      font-size: 2em; 
-  } */
 
 /****/  
   /* label color */
   .input-field label {
     color: #000;
   }
+  
+  /* icon prefix focus color */
+   .input-field .prefix.active {
+    color: rgb(233, 140, 78);
+  }
+
   /* label focus color */
-  #register-form .input-field input[type=text]:focus + label {
+  #register-form .input-field input:focus + label {
     color: rgb(167, 44, 44);
   }
   /* label underline focus color */
-  #register-form .input-field input[type=text]:focus {
-    border-bottom: 1px solid yellow;
-    box-shadow: 0 1px 0 0 yellow;
+  #register-form .input-field input:focus {
+    border-bottom: 2px solid #EE7827;
+    box-shadow: 0 1px 0 0 #EE7827;
   }
+
   /* valid color */
-  #register-form .input-field input[type=text].valid {
-    border-bottom: 10px solid green;
+  #register-form .input-field input.valid {
+    border-bottom: 2px solid green;
     box-shadow: 0 1px 0 0 green;
   }
   /* invalid color */
-  #register-form .input-field input[type=text].invalid {
-    border-bottom: 3px solid rgb(163, 32, 32) ;
+  #register-form .input-field input.invalid {
+    border-bottom: 2px solid rgb(163, 32, 32) ;
     box-shadow: 0 1px 0 0 rgb(207, 101, 101);
   }
-  /* icon prefix focus color */
-  .input-field .prefix.active {
-    color: #000;
-  }
+  
 
 
 
