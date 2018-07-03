@@ -14,6 +14,7 @@
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/forms.css" media="screen,projection" />
     <!-- add roboto font  ??? -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <!--Let browser know website is optimized for mobile-->
@@ -227,27 +228,69 @@
     <div id="modal_register" class="modal">
         <div class="modal-content blue darken-2">
             <h4 class="center-align white-text">Register</h4>
-            <form>
+            <form id="register-form"  >
                 <div class="input-field">
                     <i class="material-icons prefix">person</i>
-                    <input type="text" id="name">
-                    <label class="white-text" for="name">Name</label>
+                    <input type="text" id="username" data-error=".errorTxt1">
+                    <div class="errorTxt1"></div>
+                    <label class="white-text" for="username">Username</label>
                 </div>
                 <div class="input-field">
                     <i class="material-icons prefix">email</i>
-                    <input type="email" id="email">
+                    <input type="email" id="email" data-error=".errorTxt2">
                     <label class="white-text" for="email">Email</label>
                 </div>
                 <div class="input-field">
                     <i class="material-icons prefix">lock</i>
-                    <input type="email" id="password">
+                    <input type="email" id="password" data-error=".errorTxt3">
                     <label class="white-text" for="email">Password</label>
                 </div>
                 <div class="input-field">
                     <i class="material-icons prefix">lock_open</i>
-                    <input type="email" id="password">
+                    <input type="email" id="repassword" data-error=".errorTxt4">
                     <label class="white-text" for="email">Repeat Password</label>
                 </div>
+                <!-- <div class="input-field">
+                    <label for="crole">Role *</label>
+                    <select class="error browser-default" id="crole" name="crole" data-error=".errorTxt6">
+                        <option value="" disabled="" selected="">Choose your areas of interest</option>
+                        <option value="1">Art</option>
+                        <option value="2">Theater</option>
+                        <option value="3">Film</option>
+                        <option value="3">Music</option>
+                        <option value="3">Photography</option>
+                        <option value="3">Dance</option>
+                        <option value="3">Dance</option>
+                    </select>
+                    <div class="input-field">
+                        <div class="errorTxt6"></div>
+                    </div>
+                </div>
+                <!-- <div class="input-field"></div> -->
+                <!-- <div class="col s12">
+                    <label for="genter_select">Gender *</label>
+                    <p>
+                      <input name="cgender" type="radio" id="gender_male" data-error=".errorTxt8" aria-required="true" class="error" aria-describedby="cgender-error">
+                      <label for="gender_male">Male</label>
+                    </p>
+                    <p>
+                      <input name="cgender" type="radio" id="gender_female" value="f" class="error">
+                      <label for="gender_female">Female</label>
+                    </p>
+                    <div class="input-field">
+                        <div class="errorTxt8"><div id="cgender-error" class="error">This field is required.</div></div>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <label for="tnc_select">Service Agreement</label>
+                    <p>
+                        <input type="checkbox" class="checkbox error" id="cagree" name="cagree" data-error=".errorTxt9" aria-required="true" aria-describedby="cagree-error"> 
+                        <label for="cagree">Please agree to our policy</label>
+                     </p>
+                    <div class="input-field">
+                        <div class="errorTxt6"><div id="crole-error" class="error">This field is required.</div></div>
+                    </div>
+                </div>  -->
                 <button class="btn btn-med orange login-btn waves-effect waves-green">
                     <i class="fas fa-user-plus center-align"></i>
                 </button>
@@ -292,13 +335,13 @@
                     <!-- events from backend will be displayed here -->
                 </div>
                 <li class="collection-item">
-                    <div>Event 1 
-                            <a href="#!" class="right-alignment">
-                                    <i class="material-icons green-text">link</i>
-                            </a>
-                            <a href="#!" class="right-align delete_favorite"></a>
-                                <i class="material-icons red-text">close</i>
-                            </a>
+                    <div>Event 1
+                        <a href="#!" class="right-alignment">
+                            <i class="material-icons green-text">link</i>
+                        </a>
+                        <a href="#!" class="right-align delete_favorite"></a>
+                        <i class="material-icons red-text">close</i>
+                        </a>
                     </div>
                 </li>
             </ul>
@@ -311,6 +354,9 @@
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
+    <script src="js/form_validations/register_form_validation.js"></script>
 
     <!-- JS Scripts/ Modules -->
     <script src="js/app.js" type="module"></script>
@@ -319,14 +365,17 @@
     <!-- JQUERY FOR MATERIALIZE.CSS  -->
     <script>
         $(document).ready(function () {
-            $('.dropdown-button').dropdown({
-                constrainWidth: false,
-                hover: true,
-                belowOrigin: true,
-                alignment: 'left'
-            });
+            // $('.dropdown-button').dropdown({
+            //     constrainWidth: false,
+            //     hover: true,
+            //     belowOrigin: true,
+            //     alignment: 'left'
+            // });
 
             // // jQuery START HERE //
+            // //INITIALIZE SELECT 
+            // $('#category').material_select(); 
+            
             // // SIDENAV for mobile
             $('.button-collapse').sideNav();
 
@@ -371,7 +420,7 @@
                 // console.log($(this));
                 // console.log(e);
             });
-
+            
             //Initialize TOOLTIP
             $('.tooltipped').tooltip({
                 exitDelay: 0,
@@ -387,20 +436,23 @@
                 }
             });
 
+            
+
+
             //DELETE EVENT FROM FAVORITES
             //Event delegation
-            $('.favorites_to_delete').on('click','.delete', function(e){
-                $(this).parent().parent().remove(); 
+            $('.favorites_to_delete').on('click', '.delete', function (e) {
+                $(this).parent().parent().remove();
                 console.log("Elements:");
                 console.log($(this).parent());
                 console.log($(this).parent().parent());
-                
+
                 //TODO remove from the array   !!!
 
 
                 console.log("Deleted");
-                e.preventDefault(); 
-            });     
+                e.preventDefault();
+            });
 
 
         });

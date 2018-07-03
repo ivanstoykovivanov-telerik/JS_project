@@ -45,7 +45,7 @@ body{
 .input-field input{
   margin-top: 2em;
   margin-bottom: 2em;
-  border-bottom: 2px solid black !important;  
+  /* border-bottom: 2px solid black !important;   */
 }
 
 
@@ -178,19 +178,16 @@ footer p {
   background-color: #1275CD ;   
 }
 
-/********* LOGIN *********/
 
 
-.login-btn{
-  display: block; 
-  width: 15%; 
-  margin: auto;   
-  margin-top: 20px; 
+
+#register-form .input-field:focus  {
+  border-bottom: 5px solid green; 
+  /* border-bottom: 2px solid green;  */
 }
 
-.login-btn:hover{
-  background-color: rgb(236, 122, 9) !important;
-}
+
+
 
 
 .delete_favorite:hover{

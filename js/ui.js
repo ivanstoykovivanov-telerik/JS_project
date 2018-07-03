@@ -27,9 +27,9 @@ export class  UI{
                     this.categoriesSelect.appendChild(option);
                 });
                 
-                // console.log(this.categoriesSelect);
-                // console.log(categories.categories[0].name);
-                // console.log(categories.categories[0].id);
+                //INITIALIZE SELECT DROPDOWN
+                $('#category').material_select();
+                
             })
             .catch(err => console.log(err));
     }

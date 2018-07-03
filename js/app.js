@@ -36,8 +36,6 @@ document.querySelector("#searchBtn").addEventListener('click', (e) => {
                         Materialize.toast(toastHTML, 2000, 'rounded');
                         var eventName = $(this)[0].attributes.event_name.value; 
                         var eventURL = $(this)[0].attributes.event_URL.value; 
-                        // console.log(eventID1);
-                        // console.log(eventID2);
                         console.log(eventName);
                         console.log(eventURL);
                         ui.addToFavorites(eventName, eventURL);  

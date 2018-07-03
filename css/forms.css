@@ -1,0 +1,78 @@
+/******** FORMS   *********/
+
+
+/******** REGISTER FORM   *********/
+
+/* validation error message  */
+#register-form .input-field div.error{
+    position: relative;
+    top: -1rem;
+    left: 0rem;
+    font-size: 1.8rem;
+    font-weight: bold; 
+    color:#FF4081;
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+  
+  /* #register-form .input-field label.active{
+      width:100%;
+      /* color: yellow; 
+      border: 2px solid green; 
+  } */
+  
+  /* Works */
+  /* #register-form .input-field input{
+      background-color: greenyellow; 
+  } */
+
+  .helper-text{
+      color :red; 
+      font-size: 2em; 
+  }
+
+/****/  
+  /* label color */
+  .input-field label {
+    color: #000;
+  }
+  /* label focus color */
+  #register-form .input-field input[type=text]:focus + label {
+    color: rgb(167, 44, 44);
+  }
+  /* label underline focus color */
+  #register-form .input-field input[type=text]:focus {
+    border-bottom: 1px solid yellow;
+    box-shadow: 0 1px 0 0 yellow;
+  }
+  /* valid color */
+  #register-form .input-field input[type=text].valid {
+    border-bottom: 3px solid green;
+    box-shadow: 0 1px 0 0 green;
+  }
+  /* invalid color */
+  #register-form .input-field input[type=text].invalid {
+    border-bottom: 3px solid rgb(163, 32, 32) ;
+    box-shadow: 0 1px 0 0 rgb(207, 101, 101);
+  }
+  /* icon prefix focus color */
+  .input-field .prefix.active {
+    color: #000;
+  }
+
+
+
+
+/********* LOGIN FORM  *********/
+.login-btn{
+    display: block; 
+    width: 15%; 
+    margin: auto;   
+    margin-top: 20px; 
+  }
+  
+  .login-btn:hover{
+    background-color: rgb(236, 122, 9) !important;
+  }
