@@ -4,7 +4,7 @@ console.log("found: login-form ");
 
 $("#login-form").validate({
     rules: {
-        username: {
+        email: {
             required: true,
             minlength: 5
         },
@@ -15,8 +15,8 @@ $("#login-form").validate({
     },
     //For custom messages
     messages: {
-        username: {
-            required: "Username is required",
+        email: {
+            required: "Email is required",
             minlength: "Enter at least 5 characters"
         },
         password: {

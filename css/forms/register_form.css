@@ -1,0 +1,112 @@
+/******** FORMS   *********/
+
+
+/******** REGISTER FORM   *********/
+
+/* validation error message  */
+#register-form .input-field div.invalid{
+    margin-left: 6%;
+    margin-top: 2px;  
+    font-size: 1.2rem;
+    /* font-weight: bold;  */
+    color:red;
+    /* -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%); */
+    transform: translateY(0%);
+  }
+  
+.reg-form-part-2{
+  margin-top: 60px;
+  margin-bottom: 150px;  
+}
+
+/****/  
+  /* label color */
+  .input-field label {
+    color: #000;
+  }
+  
+  #register-form label{
+    color : rgba(0, 0, 0, 0.664);
+  }
+
+  /* icon prefix focus color */
+   .input-field .prefix.active {
+    color: rgb(233, 140, 78);
+  }
+
+  /* label focus color */
+  #register-form .input-field input:focus + label {
+    color: rgb(167, 44, 44);
+  }
+  /* label underline focus color */
+  #register-form .input-field input:focus {
+    border-bottom: 2px solid #EE7827;
+    box-shadow: 0 1px 0 0 #EE7827;
+  }
+
+  /* valid color */
+  #register-form .input-field input.valid {
+    border-bottom: 2px solid green;
+    box-shadow: 0 1px 0 0 green;
+  }
+  /* invalid color */
+  #register-form .input-field input.invalid {
+    border-bottom: 2px solid rgb(163, 32, 32) ;
+    box-shadow: 0 1px 0 0 rgb(207, 101, 101);
+  }
+  
+
+/****** DROPDOWN ******/ 
+#register-form .dropdown-content li>a, 
+#register-form .dropdown-content li>span{
+  color: rgb(230, 98, 11);
+  background-color: blue;
+  color: white; 
+}
+
+#register-form .select-wrapper input.select-dropdown {
+  border-bottom: .5px solid grey;
+  /* box-shadow: 0 1px 0 0 #000; */
+}
+/* invalid color */
+/* #register-form .input-field input[type=text].invalid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+} */ 
+
+
+/****  RADIO BUTTONS ****/
+[type="radio"]:checked+label:after, 
+[type="radio"].with-gap:checked+label:after {
+  background-color: #EE7827;
+}
+
+[type="radio"]:checked+label:after, 
+[type="radio"].with-gap:checked+label:before, 
+[type="radio"].with-gap:checked+label:after {
+  border: 2px solid #EE7827;
+}
+
+/***  TICK (agreement) ***********/
+[type="checkbox"]:checked+label:before{
+  border-right: 5px solid #EE7827;
+  border-bottom: 4px solid #EE7827;
+}
+
+/********* BUTTON  *********/
+.login-btn{
+    display: block; 
+    width: 15%; 
+    margin: auto;   
+    margin-top: 20px; 
+  }
+  
+  .login-btn:hover{
+    background-color: rgb(236, 122, 9) !important;
+  }
+
+/* 
+//TEMPLATE : 
+https://materializecss.com/text-inputs.html */
