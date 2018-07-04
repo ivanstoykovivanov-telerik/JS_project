@@ -9,14 +9,36 @@ body{
   background: url("../img/city_painting.jpg");   
 }
 
-.main-header{
-
-}
 .brand-logo{
   font-size: 3.5em !important;
   color: #FF962C !important; 
   font-weight: bolder !important; 
 }
+
+/*****  MOBILE NAV  *****/
+#mobile-nav{
+  background-color: rgba(225, 188, 228, 0.767);  
+}
+
+#mobile-nav .content{
+  font-size: 1.5em; 
+}
+
+#mobile-nav li>a>i {
+  color: black;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+#mobile-nav i {
+  margin-right: .5em; 
+}
+
+.logo-mobile{
+  color:black; 
+  font-weight:bold; 
+}
+
 /***** SEARCH FORM *********/
 .section-search{
   background-color: rgba(99, 204, 116, 0.15);  
@@ -41,13 +63,6 @@ body{
   font-size: 1.6rem;  
 
 }
-
- /* .input-field input{
-  margin-top: 2em;
-  margin-bottom: 2em;
-  /* border-bottom: 2px solid black !important;   */
-/* }  */
-
 
 .select-wrapper{
   margin-top: 20px;
@@ -88,6 +103,27 @@ body{
 .btn-floating.btn-large i {
   line-height: 75px;
 }
+
+
+.input-field label {
+  color: #000;
+}
+
+/* @media screen and (max-width: 720px) {
+
+    label.event-categories{
+      font-size: 1em; 
+      margin-bottom: 40px; 
+    }
+
+    .search-form .select-wrapper input.select-dropdown{
+      color:red;  
+      width:120%; 
+      font-size: 1em; 
+      font-weight: bold; 
+    }
+
+} */
 
 
 /***** CARDS *********/
@@ -143,41 +179,6 @@ footer p {
   font-weight: bold; 
 }
 
-/*****  MOBILE NAV  *****/
- #mobile-nav{
-  background-color: rgba(225, 188, 228, 0.767);  
-}
-
-#mobile-nav .content{
-  font-size: 1.5em; 
-}
-
-#mobile-nav li>a>i {
-  color: black;
-  font-size: 1.3rem;
-  font-weight: 600;
-}
-
-#mobile-nav li>a{
-  /* color: white; */
-  /* color: white; */
-  /* font-size: 1.1rem; */
-  /* margin-left: .4rem; */
-}
-
-#mobile-nav i {
-  margin-right: .5em; 
-}
-
-
-#mobile-nav .btn{
-
-} 
-
-.logo-mobile{
-  color:black; 
-  font-weight:bold; 
-}
 
 
 /*** PICKERS  *******/ 

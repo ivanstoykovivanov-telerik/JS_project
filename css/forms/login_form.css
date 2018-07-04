@@ -24,7 +24,7 @@
 
 /****/  
   /* label color */
-  .input-field label {
+  #login-form .input-field label {
     color: #000;
   }
   
