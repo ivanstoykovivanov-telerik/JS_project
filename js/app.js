@@ -56,21 +56,15 @@ document.querySelector("#searchBtn").addEventListener('click', (e) => {
 
     //DELETE EVENT FROM FAVORITES
     //Event delegation
-    //TODO : 
     $('.favorites_to_delete').on('click', '.delete', function (e) {
-        //remove favourite
-        $(this).parent().parent().remove();
-        console.log("FAV Elements:");
-        console.log($(this));
-        console.log("event id: ");
+        $(this).parent().parent().parent().remove();  
+        // console.log("FAV Elements:");
+        // console.log($(this));
+        // console.log("event id: ");
         let event_id = $(this).attr("event_id");  
-        console.log(event_id);
-        console.log($(this).attr("event_id"));
-        // console.log($(this).parent());
-        // console.log($(this).parent().parent());
-
-        //TODO remove from the array   !!!
-        
+        // console.log(event_id);
+        // console.log($(this).attr("event_id"));
+       
         //remove from favs array: 
         ui.removeFromFavorites(event_id); 
         e.preventDefault();
