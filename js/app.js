@@ -21,8 +21,6 @@ document.querySelector("#searchBtn").addEventListener('click', (e) => {
             .then(events => {
                 const eventsLength = events.events.length;
                 const eventsList = events.events; 
-                console.log(events.events);
-                console.log(eventsLength);
 
                 if(eventsLength > 0){
                     //Show the event cards : 
@@ -34,8 +32,6 @@ document.querySelector("#searchBtn").addEventListener('click', (e) => {
                         Materialize.toast(toastHTML, 2000, 'rounded');
                         var eventName = $(this)[0].attributes.event_name.value; 
                         var eventURL = $(this)[0].attributes.event_URL.value; 
-                        console.log(eventName);
-                        console.log(eventURL);
                         ui.addToFavorites(eventName, eventURL);  
                     });
                     //MATERIALBOX
@@ -45,8 +41,8 @@ document.querySelector("#searchBtn").addEventListener('click', (e) => {
             });
     }else{
        
-       //DONE IN FRONT END: 
-        console.log("empty credentials");
+       //TO BE DONE IN FRONT END: 
+        console.log("Empty City Input");
         
         //Handle ERROR MESSAGE:
         ui.displayErrorMessage("Please, fill in the name of the city.");
@@ -54,16 +50,11 @@ document.querySelector("#searchBtn").addEventListener('click', (e) => {
     
 });
 
-    //DELETE EVENT FROM FAVORITES
+    //DELETE LIKED EVENT FROM FAVORITES
     //Event delegation
     $('.favorites_to_delete').on('click', '.delete', function (e) {
         $(this).parent().parent().parent().remove();  
-        // console.log("FAV Elements:");
-        // console.log($(this));
-        // console.log("event id: ");
         let event_id = $(this).attr("event_id");  
-        // console.log(event_id);
-        // console.log($(this).attr("event_id"));
        
         //remove from favs array: 
         ui.removeFromFavorites(event_id); 

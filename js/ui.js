@@ -35,8 +35,6 @@ export class  UI{
     }
 
     displayEvents(events){
-        console.log("In method: ");
-        console.log(events);
         
         let html = "";
         events.forEach(event => {
@@ -106,43 +104,22 @@ export class  UI{
                 url : eventURL
         }; 
         this.favoriteEvents.push(favoriteEvent); 
-        console.log(this.favoriteEvents);
         this.displayFavoriteEvents(); 
     }
 
     removeFromFavorites(id){
-    //    console.log("Favs reached");
-    //    console.log(this.favoriteEvents);
-       
        this.favoriteEvents.map(el => {
             if(el.id == id){
                 this.favoriteEvents.splice(id, 1); 
             }
         }); 
         
-        // console.log("After splicing");
-        // console.log(this.favoriteEvents);
     }
 
     displayFavoriteEvents(){
         let html = "";
         if(this.favoriteEvents.length  > 0){
             this.favoriteEvents.forEach(event => {
-                // html += `
-                //     <li class="collection-item" event_id="${event.id}">
-                //         <div>${event.name.substring(0,25)}... 
-                //             <!-- <span class=> -->
-                //                 <a href="${event.url}" target="_blank" class="right-alignment">
-                //                         <i class="material-icons green-text">link</i>
-                //                     </a>
-                //                     <a href="#!"  class="btn right-alignment delete" event_id="${event.id}">
-                //                         <i class="material-icons red-text" event_id="${event.id}">close</i>
-                //                     </a>
-                //             <!-- </span> -->
-                //         </div>
-                //     </li>
-                // `
-                //NEW :    
                 html +=  `
                     <li class="collection-item">
                         <div class="row">
@@ -165,17 +142,11 @@ export class  UI{
             });
         }
          document.querySelector("#favoritesToDisplay").innerHTML = html; 
-          
     }
-
-
-   
-
 
     fetchEventById(id){
         //connect to the API and get the event
     }
-
 }
 
 

@@ -10,11 +10,7 @@
     margin-left: 6%;
     margin-top: 2px;  
     font-size: 1.2rem;  
-    /* font-weight: bold;  */
     color:red;
-    /* -webkit-transform: translateY(0%);
-    -ms-transform: translateY(0%);
-    -o-transform: translateY(0%); */
     transform: translateY(0%);
   }
   
@@ -63,15 +59,9 @@
 /****** DROPDOWN ******/ 
 #register-form .dropdown-content li>a, 
 #register-form .dropdown-content li>span{
-  /* color: rgb(230, 98, 11); */
-  /* background-color: blue; */
   background-color: rgb(52, 138, 212);
   color: white; 
 }
-
-/* #register-form .dropdown-content li>span.disabled{
-  color:red; 
-} */
 #register-form .select-dropdown li.disabled>span{
   color:rgb(170, 167, 167); 
   
@@ -79,14 +69,7 @@
 
 #register-form .select-wrapper input.select-dropdown {
   border-bottom: .5px solid grey;
-  /* box-shadow: 0 1px 0 0 #000; */
 }
-/* invalid color */
-/* #register-form .input-field input[type=text].invalid {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000;
-} */ 
-
 
 /****  RADIO BUTTONS ****/
 [type="radio"]:checked+label:after, 
