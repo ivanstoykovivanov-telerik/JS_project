@@ -3,11 +3,16 @@
 
 /******** REGISTER FORM   *********/
 
+
+.reg-form-part-2 label{
+  font-size: 1.1em;
+}
+
 /* validation error message  */
 #register-form .input-field div.invalid{
     margin-left: 6%;
     margin-top: 2px;  
-    font-size: 1.2rem;
+    font-size: 1.2rem;  
     /* font-weight: bold;  */
     color:red;
     /* -webkit-transform: translateY(0%);
@@ -61,9 +66,18 @@
 /****** DROPDOWN ******/ 
 #register-form .dropdown-content li>a, 
 #register-form .dropdown-content li>span{
-  color: rgb(230, 98, 11);
-  background-color: blue;
+  /* color: rgb(230, 98, 11); */
+  /* background-color: blue; */
+  background-color: rgb(52, 138, 212);
   color: white; 
+}
+
+/* #register-form .dropdown-content li>span.disabled{
+  color:red; 
+} */
+#register-form .select-dropdown li.disabled>span{
+  color:rgb(170, 167, 167); 
+  
 }
 
 #register-form .select-wrapper input.select-dropdown {

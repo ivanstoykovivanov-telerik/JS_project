@@ -17,17 +17,11 @@ $("#register-form").validate({
             required: true,
             minlength: 5
         },
-        rpassword: {
+        repassword: {
             required: true,
             minlength: 5,
             equalTo: "#password"
         },
-        //
-        // interests:"required", 
-        //
-        // background: "required",
-        //
-        // gender: "required",
         //
         agree: "required",
     },
@@ -40,6 +34,9 @@ $("#register-form").validate({
         email: {
             required: "Email address is required",
             minlength: "Enter at least 10 characters"
+        },
+        repassword: {
+            equalTo: "Passwords do not match"
         }
     },
     errorClass: "invalid",
