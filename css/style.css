@@ -171,23 +171,15 @@ footer p {
 
 
 /*** PICKERS  *******/ 
-/* .login{
-  border-left: 0px;
-} */
+
 .picker__date-display{
   background-color: #1275CD ;   
 }
-
-
-
 
 #register-form .input-field:focus  {
   border-bottom: 5px solid green; 
   /* border-bottom: 2px solid green;  */
 }
-
-
-
 
 
 .delete_favorite:hover{

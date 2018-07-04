@@ -1,7 +1,8 @@
 /******** FORMS   *********/
 
 
-/******** REGISTER FORM   *********/
+/******** LOGIN FORM   *********/
+
 
 /* validation error message  */
 #login-form .input-field div.invalid{
@@ -96,11 +97,17 @@
 }
 
 /********* BUTTON  *********/
+
 .login-btn{
     display: block; 
     width: 15%; 
     margin: auto;   
-    margin-top: 20px; 
+  }
+
+#login-form .login-btn{
+    display: block; 
+    width: 15%; 
+    margin: auto;   
   }
   
   .login-btn:hover{
