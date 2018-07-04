@@ -12,8 +12,6 @@ document.querySelector("#searchBtn").addEventListener('click', (e) => {
     //get values 
     const city = document.querySelector("#city").value; 
     const category = document.querySelector("#category").value; 
-    // console.log(city);
-    // console.log(category);
     
     //VALIDATE: 
     if(city !== ''){
@@ -46,6 +44,8 @@ document.querySelector("#searchBtn").addEventListener('click', (e) => {
                 }
             });
     }else{
+       
+       //DONE IN FRONT END: 
         console.log("empty credentials");
         
         //Handle ERROR MESSAGE:
@@ -53,5 +53,27 @@ document.querySelector("#searchBtn").addEventListener('click', (e) => {
     }
     
 });
+
+    //DELETE EVENT FROM FAVORITES
+    //Event delegation
+    //TODO : 
+    $('.favorites_to_delete').on('click', '.delete', function (e) {
+        //remove favourite
+        $(this).parent().parent().remove();
+        console.log("FAV Elements:");
+        console.log($(this));
+        console.log("event id: ");
+        let event_id = $(this).attr("event_id");  
+        console.log(event_id);
+        console.log($(this).attr("event_id"));
+        // console.log($(this).parent());
+        // console.log($(this).parent().parent());
+
+        //TODO remove from the array   !!!
+        
+        //remove from favs array: 
+        ui.removeFromFavorites(event_id); 
+        e.preventDefault();
+    });
 
 

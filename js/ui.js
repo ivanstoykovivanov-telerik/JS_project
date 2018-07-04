@@ -110,8 +110,18 @@ export class  UI{
         this.displayFavoriteEvents(); 
     }
 
-    removeFromFavorites(){
+    removeFromFavorites(id){
+       console.log("Favs reached");
+       console.log(this.favoriteEvents);
+       
+       this.favoriteEvents.map(el => {
+            if(el.id == id){
+                this.favoriteEvents.splice(id, 1); 
+            }
+        }); 
         
+        console.log("After splicing");
+        console.log(this.favoriteEvents);
     }
 
     displayFavoriteEvents(){
@@ -119,7 +129,7 @@ export class  UI{
         if(this.favoriteEvents.length  > 0){
             this.favoriteEvents.forEach(event => {
                 html += `
-                    <li class="collection-item">
+                    <li class="collection-item" event_id="${event.id}">
                         <div>${event.name} 
                             <!-- <span class=> -->
                                 <a href="${event.url}" target="_blank" class="right-alignment">
@@ -135,14 +145,6 @@ export class  UI{
             });
         }
          document.querySelector("#favoritesToDisplay").innerHTML = html; 
-         //ADD EVENT LISTTENER TO DELETE EVENTS: 
-        //  document.querySelector(".delete").addEventListener("click", function(e){
-        //     // console.log(e.target);
-        //     console.log("Attributes:");
-        //     console.log(e.target.attributes);
-        //     console.log("Value:");
-        //     console.log(e.target.attributes.event_id.value);
-        // });   
           
     }
 
