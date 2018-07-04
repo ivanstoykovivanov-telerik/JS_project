@@ -24,25 +24,27 @@
 
 <body>
     <div class="container">
-        <form id="login-form" action novalidate="novalidate">
-            <div class="input-field s12">
-                <i class="material-icons prefix">email</i>
-                <input id="email" name="email" type="email" data-error=".errorTxt1">
-                <label class="white-text" for="email">Email</label>
-                <div class="errorTxt1"></div>
-            </div>
-            <div class="input-field">
-                <i class="material-icons prefix">lock</i>
-                <input id="password" name="password" type="password" data-error=".errorTxt2">
-                <label class="white-text" for="password">Password</label>
-                <div class="errorTxt2"></div>
-            </div>
-            <button class="btn btn-med orange login-btn waves-effect waves-green">
-                <i class="fas fa-user-plus center-align"></i>
-            </button>
-        </form>
+        <div class="row">
+            <form id="login-form" action novalidate="novalidate">
+                
+                <div class="input-field s12">
+                    <i class="material-icons prefix">email</i>
+                    <input id="email" name="email" type="email" data-error=".errorTxt1">
+                    <label class="white-text" for="email">Email</label>
+                    <div class="errorTxt1"></div>
+                </div>
+                <div class="input-field">
+                    <i class="material-icons prefix">lock</i>
+                    <input id="password" name="password" type="password" data-error=".errorTxt2">
+                    <label class="white-text" for="password">Password</label>
+                    <div class="errorTxt2"></div>
+                </div>
+                <button class="btn btn-med orange login-btn waves-effect waves-green">
+                    <i class="fas fa-user-plus center-align"></i>
+                </button>
+            </form>
+        </div>
     </div>
-
 
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

@@ -4,7 +4,7 @@
 /******** REGISTER FORM   *********/
 
 /* validation error message  */
-#register-form .input-field div.invalid{
+#login-form .input-field div.invalid{
     margin-left: 6%;
     margin-top: 2px;  
     font-size: 1.2rem;
@@ -27,7 +27,7 @@
     color: #000;
   }
   
-  #register-form label{
+  #login-form label{
     color : rgba(0, 0, 0, 0.664);
   }
 
@@ -37,41 +37,41 @@
   }
 
   /* label focus color */
-  #register-form .input-field input:focus + label {
+  #login-form .input-field input:focus + label {
     color: rgb(167, 44, 44);
   }
   /* label underline focus color */
-  #register-form .input-field input:focus {
+  #login-form .input-field input:focus {
     border-bottom: 2px solid #EE7827;
     box-shadow: 0 1px 0 0 #EE7827;
   }
 
   /* valid color */
-  #register-form .input-field input.valid {
+  #login-form .input-field input.valid {
     border-bottom: 2px solid green;
     box-shadow: 0 1px 0 0 green;
   }
   /* invalid color */
-  #register-form .input-field input.invalid {
+  #login-form .input-field input.invalid {
     border-bottom: 2px solid rgb(163, 32, 32) ;
     box-shadow: 0 1px 0 0 rgb(207, 101, 101);
   }
   
 
 /****** DROPDOWN ******/ 
-#register-form .dropdown-content li>a, 
-#register-form .dropdown-content li>span{
+#login-form .dropdown-content li>a, 
+#login-form .dropdown-content li>span{
   color: rgb(230, 98, 11);
   background-color: blue;
   color: white; 
 }
 
-#register-form .select-wrapper input.select-dropdown {
+#login-form .select-wrapper input.select-dropdown {
   border-bottom: .5px solid grey;
   /* box-shadow: 0 1px 0 0 #000; */
 }
 /* invalid color */
-/* #register-form .input-field input[type=text].invalid {
+/* #login-form .input-field input[type=text].invalid {
   border-bottom: 1px solid #000;
   box-shadow: 0 1px 0 0 #000;
 } */ 
